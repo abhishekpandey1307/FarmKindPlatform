@@ -217,7 +217,7 @@ export async function handleBackendApiRequest(
   // Handle CORS for all API routes (essential when frontend is on Vercel and backend is on Render)
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, X-Idempotency-Key');
 
   if (req.method === 'OPTIONS') {
     res.writeHead(204);
@@ -320,6 +320,9 @@ export async function handleBackendApiRequest(
     req.on('end', () => {
       try {
         const parsed = JSON.parse(bodyData);
+        if (!parsed.orderId && req.headers['x-idempotency-key']) {
+          parsed.orderId = req.headers['x-idempotency-key'] as string;
+        }
         const created = addSolarBooking(parsed);
         res.writeHead(201, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ status: 'ok', booking: created }));
@@ -339,8 +342,9 @@ export async function handleBackendApiRequest(
     });
     req.on('end', () => {
       try {
-        const { moisture, temperature, source } = JSON.parse(bodyData);
-        const log = recordSoilLog(moisture, temperature, source);
+        const parsed = JSON.parse(bodyData);
+        const logId = (req.headers['x-idempotency-key'] as string) || parsed.id || undefined;
+        const log = recordSoilLog(parsed.moisture, parsed.temperature, parsed.source, logId);
         res.writeHead(201, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ status: 'ok', log }));
       } catch (err) {
@@ -360,6 +364,9 @@ export async function handleBackendApiRequest(
     req.on('end', () => {
       try {
         const decisionData = JSON.parse(bodyData);
+        if (!decisionData.decisionId && req.headers['x-idempotency-key']) {
+          decisionData.decisionId = req.headers['x-idempotency-key'] as string;
+        }
         const log = auditAiDecision(decisionData);
         res.writeHead(201, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ status: 'ok', audit: log }));

@@ -14,7 +14,7 @@
 | **2. Proposed Solution** | ✅ YES | **Slide 1 & Slide 3:** Intelligent software + shared access layer for community solar infrastructure; closed-loop decision engine. |
 | **3. Alignment to the Challenge** | ✅ YES | **Slide 4 & Section 10:** Dedicated 7-point visual matrix matching national agricultural challenges to FarmKind architecture. |
 | **4. Key Features / User Journey** | ✅ YES | **Slide 6 & Section 12:** 6-step flow: *Need → Compare Cost → Sensor Data → AI Decision → Action → Savings*. |
-| **5. Technical Approach** | ✅ YES | **Slide 5, Section 11 & 13:** Deterministic FAO-56 math, React 19/TS, Node.js backend, persistent offline queue, Gemini 2.0 Voice. |
+| **5. Technical Approach** | ✅ YES | **Slide 5, Section 11 & 13:** Deterministic FAO-56 math, React 19/TS, native Node.js HTTP backend, persistent offline queue, Gemini Flash Voice. |
 | **6. Innovation** | ✅ YES | **Slide 8 & Section 10:** 5 System-level innovations: Access over Ownership, Savings-First, M-U-D-A, Solar Hub, Rural UX. |
 | **7. Expected Impact** | ✅ YES | **Slide 9 & Section 14:** Transparent baseline vs. FarmKind table with mathematical formulas and labeled pilot targets. |
 | **8. Implementation Roadmap** | ✅ YES | **Slide 11 & Section 15:** 4-Phase rollout (Phase 1 Pilot → Phase 2 FPO → Phase 3 District → Phase 4 Multi-Region). |
@@ -322,17 +322,17 @@
 ├───────────────────────────┼───────────────────────────┼─────────────────────────┤
 │ 4. ACCESS (SOLAR HUB)     │ 5. ACT (VOICE & QUEUE)    │ 6. AFTER (SAVINGS)      │
 │ Screen3Resources.tsx      │ MitraVoiceModal.tsx       │ Screen7Impact.tsx       │
-│ Pay-per-use community     │ Hindi/Marathi voice AI +  │ Verified 1.63M L water  │
+│ Pay-per-use community     │ Hindi/Marathi voice AI +  │ Modeled 1.63M L water   │
 │ solar pump & cold room    │ persistent offline queue  │ saved, 167.5 L diesel   │
 │ reservation cards.        │ with idempotent replay.   │ avoided, certificate.   │
 └───────────────────────────┴───────────────────────────┴─────────────────────────┘
 ```
 
 #### Transparent Software Implementation Status:
-- **[VERIFIED IMPLEMENTATION]:** Functional software prototype built with React 19, TypeScript, and Node.js.
-- **[VERIFIED IMPLEMENTATION]:** 12 automated test suites comprising **136 tests passing** with zero errors (`vitest run`).
-- **[VERIFIED IMPLEMENTATION]:** Dual voice engine combining Google Gemini 2.0 Flash backend with Indian Web Speech TTS fallback.
-- **[VERIFIED IMPLEMENTATION]:** True Offline Queue in `localStorage` with `X-Idempotency-Key` headers preventing duplicate bookings.
+- **[VERIFIED IMPLEMENTATION]:** Functional software prototype built with React 19, TypeScript, and native Node.js HTTP server.
+- **[VERIFIED IMPLEMENTATION]:** 12 automated test suites comprising **136 tests passing** with zero errors (`npm test -- --run`).
+- **[VERIFIED IMPLEMENTATION]:** Dual voice engine combining Google Gemini Flash REST proxy with Indian Web Speech TTS and local regex intent fallback.
+- **[VERIFIED IMPLEMENTATION]:** True Offline Queue in `localStorage` with `X-Idempotency-Key` headers preventing duplicate bookings on reconnect.
 - **CREDIBILITY COMMITMENT:** Zero physical hardware manufactured or claimed; all calculations run on verified software models.
 
 #### Verbatim 60-Second Speaker Script:
@@ -593,21 +593,21 @@ FarmKind operates as a closed-loop cyber-physical orchestration platform for sma
 
 ```
                                ┌──────────────────────────────────────────────────────────┐
-                               │                 FARMKIND CLOUD BACKEND                   │
-                               │  - Node.js API Gateway & Express REST Endpoints          │
-                               │  - Gemini 2.0 Flash Live Voice Intelligence Proxy        │
-                               │  - Open-Meteo & IMD Agrometeorology Connector            │
-                               │  - JSON / SQLite Persistent Database with Idempotency    │
+                               │                 FARMKIND SECURE BACKEND                  │
+                               │  - Native Node.js HTTP Server & Custom REST Dispatcher   │
+                               │  - Google Gemini Flash REST Voice Proxy (Secret Key Safe)│
+                               │  - Open-Meteo & IMD Agrometeorology Connector (15m Cache)│
+                               │  - JSON File-Backed Database (farmkind.db.json)          │
                                └────────────────────────────┬─────────────────────────────┘
-                                                            │ HTTPS / WSS / REST
+                                                            │ HTTPS / REST
                                                             │ (with X-Idempotency-Key)
                                                             ▼
                                ┌──────────────────────────────────────────────────────────┐
-                               │           FARMKIND BROWSER & PROGRESSIVE CLIENT          │
-                               │  - React 19 + TypeScript + Custom Responsive Engine       │
-                               │  - True Offline Queue & Auto-Sync Engine (FIFO Storage)   │
-                               │  - Dual AI Voice: Gemini Server + Indian Web Speech TTS  │
-                               │  - Local Deterministic Q10 & Irrigation State Evaluators │
+                               │           FARMKIND BROWSER CLIENT (PROTOTYPE)            │
+                               │  - React 19 + TypeScript + Custom Responsive Layout Engine│
+                               │  - True Offline Queue in localStorage (Auto-Sync Online) │
+                               │  - Dual Voice AI: Gemini Server REST + Web Speech TTS    │
+                               │  - Local Deterministic FAO-56 & Q10 Agronomic Evaluators │
                                └────────────────────────────┬─────────────────────────────┘
                                                             │
                               ┌─────────────────────────────┴─────────────────────────────┐
@@ -684,12 +684,12 @@ Every screen in FarmKind is architected around the core paradigm:
 ## 13. Software Prototype & Simulation Evidence
 
 ### 13.1 Real Software Implementation (No Mocked Hardware)
-FarmKind does **not** claim to manufacture physical hardware. The submission is a fully functioning, production-ready software platform tested against real-world agronomic and meteorological datasets:
+FarmKind does **not** claim to manufacture physical hardware. The submission is a fully functioning, pilot-ready software prototype validated in local and automated test environments:
 
-- **Frontend Application:** React 19, TypeScript, Vite, Vanilla CSS design system.
-- **Backend Application:** Node.js, Express REST API, persistent file-based JSON/SQLite state engine.
-- **Voice Intelligence:** Google Gemini 2.0 Flash live conversational proxy with automated fallback to Indian Web Speech API (`hi-IN`, `mr-IN`, `en-IN`).
-- **Offline Synchronization:** Lightweight (<6 KB) FIFO mutation queue in `localStorage` supporting `X-Idempotency-Key` headers.
+- **Frontend Application:** React 19, TypeScript, Vite, Vanilla CSS design system (sub-millisecond local UI execution).
+- **Backend Application:** Native Node.js HTTP server (`http.createServer`), custom REST API router, and persistent file-backed JSON state engine (`server/data/farmkind.db.json`). Zero external server framework bloat.
+- **Voice Intelligence:** Dual-engine voice: Browser Web Speech Recognition + secure server-side REST proxy to Google Generative Language API (Gemini Flash candidate models) with local regex intent fallback and Indian Web Speech SpeechSynthesis TTS (`hi-IN`, `mr-IN`, `en-IN`).
+- **Offline Synchronization:** Client-side FIFO mutation queue in `localStorage` that persists across page refreshes and tab closures, automatically synchronizing upon network reconnect with `X-Idempotency-Key` headers preventing duplicate bookings.
 
 ### 13.2 Automated Test Suite Verification
 The complete FarmKind platform has been subjected to **12 automated test suites** in Vitest, all passing with **136 of 136 tests passing**:
@@ -806,7 +806,7 @@ $$\text{Net Farmer Rupee Savings} = ₹18,416 - ₹6,000 = \mathbf{₹12,416/\te
 
 | Team Member / Role | Focus Area | Technical & Operational Scope | Status |
 | :--- | :--- | :--- | :--- |
-| **Abhishek Pandey** | **Founder, Systems Architect & Full-Stack AI Engineer** | Architected the React 19/TypeScript client, Node.js REST backend, true offline synchronization engine with idempotency, and Google Gemini 2.0 Flash bilingual voice proxy. | **Active / Founder** |
+| **Abhishek Pandey** | **Founder, Systems Architect & Full-Stack AI Engineer** | Architected the React 19/TypeScript client, native Node.js HTTP REST backend, JSON state engine, true offline synchronization queue with idempotency, and Google Gemini Flash bilingual voice proxy. | **Active / Founder** |
 | **Precision Agro-Hydrology Advisory** | **Agronomy & Soil Physics** | Advising on FAO-56 Penman-Monteith crop water models, soil moisture matric potentials, and biological Q10 perishable decay curves. | **Planned Pilot Advisory** |
 | **Rural FPO Operations Advisory** | **FPO Partnerships & Field Deployment** | Advising on Maharashtra FPO networks, agricultural cooperatives, PM-KUSUM subsidy integration, and farmer village adoption programs. | **Planned Pilot Advisory** |
 
@@ -837,7 +837,7 @@ Before submission, the complete deck was audited against the competition evaluat
 - [x] **Are future targets clearly labeled?**  
   *Yes. Phase 1 (Pilot) is distinguished from Phase 2 (FPOs), Phase 3 (Districts), and Phase 4 (250,000 farmers).*
 - [x] **Are technical claims verified against the code?**  
-  *Yes. React 19, TypeScript, Node.js, Express, `localStorage` offline queue, `X-Idempotency-Key`, and Gemini 2.0 Flash.*
+  *Yes. React 19, TypeScript, native Node.js HTTP server, JSON database, localStorage offline queue, X-Idempotency-Key, and Gemini Flash Voice.*
 - [x] **Are all competition requirements covered?**  
   *Yes. All 26 requirements from the competition brief are addressed.*
 - [x] **Is the business model understandable?**  
