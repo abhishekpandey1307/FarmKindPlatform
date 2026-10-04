@@ -8,37 +8,37 @@
 
 ## 📋 Comprehensive Compliance & Evaluation Checklist
 
-| Competition Requirement | Addressed in Presentation | Location / Verbatim Reference |
+| Competition Requirement | Addressed in Submission | Specific Section & Verification Location |
 | :--- | :---: | :--- |
-| **1. Problem Statement** | ✅ Covered | **Slide 2 & Section 10:** Multi-dimensional smallholder crisis, water extraction, diesel costs, post-harvest losses. |
-| **2. Proposed Solution** | ✅ Covered | **Slide 3 & Slide 4:** Software + Access layer, solar-powered shared infrastructure, closed-loop intelligence. |
-| **3. Alignment to Challenge** | ✅ Covered | **Slide 4 & Section 10:** Dedicated 7-point visual challenge-to-solution matrix. |
-| **4. Key Features / User Journey** | ✅ Covered | **Slide 6 & Section 12:** Step-by-step flow: *Need → Compare Cost → Sensor Data → AI Decision → Action → Savings*. |
-| **5. Technical Approach** | ✅ Covered | **Slide 5 & Section 11:** Deterministic FAO-56 agronomy, React 19/TS, Node backend, persistent offline queue, Gemini Voice. |
-| **6. Innovation** | ✅ Covered | **Slide 8 & Section 10:** 5 System-level innovations: Access over Ownership, Savings-First, M-U-D-A, Solar Hub, Rural UX. |
-| **7. Expected Impact** | ✅ Covered | **Slide 9 & Section 14:** Rigorous baseline vs. FarmKind table with mathematical formulas and transparent assumptions. |
-| **8. Implementation Roadmap** | ✅ Covered | **Slide 11 & Section 15:** 4-Phase rollout (Phase 1 Pilot → Phase 2 FPO → Phase 3 District → Phase 4 Multi-Region). |
-| **9. Team Introduction** | ✅ Covered | **Slide 12 & Section 16:** Complementary multidisciplinary team across systems engineering, agronomy, and rural FPO ops. |
-| **10. Detailed Solution Write-Up** | ✅ Covered | **Part II, Section 10:** How FarmKind works, operational assumptions, smallholder fitness analysis. |
-| **11. System Architecture Diagram** | ✅ Covered | **Slide 5 & Part II, Section 11:** Detailed architecture diagram with distinct **DATA**, **ENERGY**, and **MONEY** flows. |
-| **12. Supporting Design Artifacts** | ✅ Covered | **Slide 7 & Part II, Section 12:** 10 Actual UI Screens annotated with *Input → Intelligence → Action → Outcome*. |
-| **13. Software Prototype / Simulation** | ✅ Covered | **Slide 7 & Part II, Section 13:** Working prototype proof: 12 test suites, 136 automated tests, zero physical hardware claims. |
-| **14. Quantified Benefit (Baseline vs FarmKind)** | ✅ Covered | **Slide 9 & Part II, Section 14:** Transparent FAO-56 metrics: water (-33.3%), diesel (-100%), cash (+₹12,416/mo), spoilage (-75%). |
-| **15. Deployment, Scale-Up & Unit Economics** | ✅ Covered | **Slide 10, Slide 11 & Part II, Section 15:** Target crop (Tomato), Geography (Nashik), FPO model, transparent unit economics. |
+| **1. Problem Statement** | ✅ YES | **Slide 2 & Section 10:** Multi-dimensional smallholder reality, water withdrawals, diesel pump extortion, 15%–20% post-harvest spoilage. |
+| **2. Proposed Solution** | ✅ YES | **Slide 1 & Slide 3:** Intelligent software + shared access layer for community solar infrastructure; closed-loop decision engine. |
+| **3. Alignment to the Challenge** | ✅ YES | **Slide 4 & Section 10:** Dedicated 7-point visual matrix matching national agricultural challenges to FarmKind architecture. |
+| **4. Key Features / User Journey** | ✅ YES | **Slide 6 & Section 12:** 6-step flow: *Need → Compare Cost → Sensor Data → AI Decision → Action → Savings*. |
+| **5. Technical Approach** | ✅ YES | **Slide 5, Section 11 & 13:** Deterministic FAO-56 math, React 19/TS, Node.js backend, persistent offline queue, Gemini 2.0 Voice. |
+| **6. Innovation** | ✅ YES | **Slide 8 & Section 10:** 5 System-level innovations: Access over Ownership, Savings-First, M-U-D-A, Solar Hub, Rural UX. |
+| **7. Expected Impact** | ✅ YES | **Slide 9 & Section 14:** Transparent baseline vs. FarmKind table with mathematical formulas and labeled pilot targets. |
+| **8. Implementation Roadmap** | ✅ YES | **Slide 11 & Section 15:** 4-Phase rollout (Phase 1 Pilot → Phase 2 FPO → Phase 3 District → Phase 4 Multi-Region). |
+| **9. Team Introduction** | ✅ YES | **Slide 12 & Section 16:** 100% Truthful founder credentials (Abhishek Pandey) + planned domain advisory capabilities. |
+| **10. Detailed Solution Write-Up** | ✅ YES | **Part II, Section 10:** How FarmKind works, operational assumptions, and why suited to Indian smallholders. |
+| **11. System Architecture Diagram** | ✅ YES | **Slide 5 & Part II, Section 11:** Architectural layout detailing **DATA FLOW**, **ENERGY FLOW**, and **MONEY FLOW**. |
+| **12. Supporting Design Artifacts** | ✅ YES | **Slide 7 & Part II, Section 12:** 6 Core UI Screens annotated with *Input → Intelligence → Action → Outcome*. |
+| **13. Software Prototype / Simulation** | ✅ YES | **Slide 7 & Part II, Section 13:** Real working prototype proof: 12 test suites, 136 tests passing, zero physical hardware claims. |
+| **14. Quantified Benefit (Baseline vs FarmKind)** | ✅ YES | **Slide 9 & Part II, Section 14:** Rigorous FAO-56 metrics: water (-33.3%), diesel (-100%), cash (+₹12,416/mo), spoilage (-75%). |
+| **15. Deployment, Scale-Up & Unit Economics** | ✅ YES | **Slide 10, Slide 11 & Part II, Section 15:** Target crop (Tomato), Geography (Nashik), FPO model, transparent unit economics. |
 
 ---
 
-# 📑 PART I: THE 12-SLIDE COMPETITION PRESENTATION DECK
+# 📑 PART I: THE 12-SLIDE MASTER COMPETITION PRESENTATION
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
 │                     FARMKIND 12-SLIDE PRESENTATION MAP                          │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │  Slide 1: Title & Strategic Vision           Slide 7: Product & Design Artifacts│
-│  Slide 2: The Smallholder Problem Context    Slide 8: Core Innovations          │
-│  Slide 3: The FarmKind Solution Framework    Slide 9: Quantified Impact         │
-│  Slide 4: Alignment to the Challenge         Slide 10: Business & Unit Economics│
-│  Slide 5: System Architecture (3 Flows)      Slide 11: Deployment & Scale Plan  │
+│  Slide 2: The Smallholder Problem Context    Slide 8: System-Level Innovations  │
+│  Slide 3: The FarmKind Reveal                Slide 9: Quantified Impact         │
+│  Slide 4: Why FarmKind Fits India            Slide 10: Business & Unit Economics│
+│  Slide 5: Architecture (3 Unified Flows)     Slide 11: Deployment & Scale Plan  │
 │  Slide 6: The Smallholder User Journey       Slide 12: Team & Execution Vision  │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -46,350 +46,386 @@
 ---
 
 ### Slide 1: Title & Strategic Vision
-**Headline:** FarmKind — The Intelligent Clean-Energy & Shared Access Operating System for Smallholder Agriculture  
-**Sub-headline:** Helping Every Small Farm Do More With Less: Less Water, Less Energy, Less Money, Less Waste.
+**Headline:** FARMKIND  
+**Sub-headline:** Helping Every Small Farm Do More With Less.
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
 │                                   FARMKIND                                      │
+│                                                                                 │
 │                "Helping Every Small Farm Do More With Less"                     │
-├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│      [ LESS WATER ]   ───────►   33.3% Irrigation Reduction (FAO-56)            │
-│      [ LESS ENERGY ]  ───────►   100% Diesel Pumping Displaced by Solar         │
-│      [ LESS MONEY ]   ───────►   ₹12,416 Net Monthly Operating Cash Saved       │
-│      [ LESS WASTE ]   ───────►   75% Post-Harvest Respiration Spoilage Prevented│
+│          LESS WATER      ────────►      MORE PRODUCTIVITY                       │
+│          LESS ENERGY     ────────►      MORE RESILIENCE                         │
+│          LESS MONEY      ────────►      MORE CLIMATE READINESS                  │
+│          LESS WASTE                                                             │
 │                                                                                 │
-│   Target Demographic: 120M+ Indian Smallholders (<2 Hectares / 5 Acres)         │
-│   Core Technology: Edge-First Agro-Intelligence + Shared Clean Energy Access    │
+│  ─────────────────────────────────────────────────────────────────────────────  │
+│  Intelligent decisions + shared clean-energy access for smallholder agriculture │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-#### Key Highlights & Positioning:
-- **What FarmKind IS:** An intelligent software and shared access layer orchestrating community solar infrastructure, agro-hydrological intelligence, and rural logistics.
-- **What FarmKind IS NOT:** It is *not* a passive advisory blog, *not* an unaffordable gadget dashboard, *not* a generic e-commerce marketplace, and *not* a novelty chatbot.
-- **The Core Convergence:** Intelligence + Affordable Access + Shared Rental Resources + Solar-Powered Infrastructure + Low-Literacy UX.
+#### Key Positioning:
+- **What FarmKind IS:** An intelligent software and shared-access operating system that turns farm context into confident decisions and connects smallholders to shared clean energy.
+- **What FarmKind IS NOT:** It is *not* a generic advice blog, *not* an unaffordable gadget dashboard, *not* an e-commerce marketplace, and *not* a novelty chatbot.
+- **The Core Convergence:** Intelligence + Affordable Access + Shared Clean-Energy Infrastructure + Rural-Ready UX.
 
 #### Verbatim 60-Second Speaker Script:
-> *"Distinguished members of the jury: Indian agriculture employs over 40% of our nation’s workforce and withdraws 90% of our freshwater. Yet, 86% of Indian farmers are smallholders cultivating under 2 hectares, caught in an agonizing squeeze between erratic monsoons, unaffordable diesel fuel, and brutal post-harvest losses.
+> *"Respected members of the jury:
 > 
-> Today, we present **FarmKind**. FarmKind is not an advice app or an e-commerce dashboard. FarmKind is an intelligent software and shared-access operating system that allows smallholders to do more with less: less water, less energy, less money, and less waste. By uniting community solar infrastructure with automated agro-hydrological intelligence and voice AI, we deliver industrial-grade precision farming to smallholders without requiring them to purchase a single rupee of expensive hardware."*
+> Small farms produce more than half of India's food. Yet every season, millions of smallholders are forced to stretch less water, burn expensive diesel, and watch perishable produce lose value under the sun.
+> 
+> We founded **FarmKind** on a single, clear thesis:
+> **Helping every small farm do more with less.**
+> 
+> Less water. Less energy. Less money. Less waste.
+> So that smallholders achieve more productivity, more financial resilience, and true climate readiness.
+> 
+> FarmKind is not an advice blog. It is not an expensive hardware gadget. It is an intelligent software and shared-access layer that connects small farmers with community clean energy and turns everyday farm data into affordable, confident action."*
 
 ---
 
-### Slide 2: Full Problem Context — The Smallholder Reality
-**Headline:** The Tri-Fold Crisis Paralyzing 120 Million Indian Smallholders
-
-```
-┌───────────────────────────┬───────────────────────────┬───────────────────────────┐
-│     WATER EXHAUSTION      │      DIESEL DEPENDENCE    │    POST-HARVEST LOSSES    │
-├───────────────────────────┼───────────────────────────┼───────────────────────────┤
-│ • Agriculture consumes    │ • 8.5M+ diesel pump sets  │ • 15% to 20% of perishable│
-│   ~90% of freshwater.     │   drain rural household   │   horticulture spoils     │
-│ • Unmetered flood watering│   savings.                │   before reaching mandis. │
-│   leads to 40% runoff &   │ • Diesel rental & fuel    │ • Lack of cold-chain      │
-│   severe root hypoxia.    │   exceeds ₹18,000/month   │   forces panic sales at   │
-│ • Falling groundwater     │   for a 3.5-acre plot.    │   rock-bottom farmgate    │
-│   tables increase pumping │ • Power grid gives erratic│   rates (₹3–₹5/kg for     │
-│   depth and pump failure. │   midnight electricity.   │   prime tomatoes).        │
-└───────────────────────────┴───────────────────────────┴───────────────────────────┘
-```
-
-#### Why Indian Smallholders Cannot Adopt Conventional Solutions:
-1. **Capital Asset Poverty:** A 3.5-acre farmer earning ₹8,000 to ₹15,000 per month cannot afford a ₹2.5–₹4.0 Lakh solar pump or a captive cold-room.
-2. **Digital & Language Divide:** 60%+ of rural operators struggle with English text menus, complex graphical charts, and desktop web applications.
-3. **Connectivity Volatility:** Farmland has intermittent 2G/3G connectivity; apps that require continuous high-speed cloud connections crash and fail.
-4. **Manual Decision Fatigue:** Weather warnings like *"rain possible in 48 hours"* do not answer the farmer's operational question: *"Do I turn on the pump right now or wait?"*
-
-#### Verbatim 60-Second Speaker Script:
-> *"Consider the reality of Ramesh Patil, a 3.5-acre tomato farmer in Nashik, Maharashtra. Ramesh spends nearly 90% of his working capital just keeping his crops alive. Because grid power is erratic and often arrives at 2:00 AM, he relies on an old 5-horsepower diesel pump burning 1.2 liters per hour, costing him over ₹18,000 every single month in fuel and engine oil. 
->
-> He flood-irrigates because he has no moisture data, wasting 1.6 million liters of groundwater monthly while leaching precious nutrients. When harvest arrives, extreme ambient heat accelerates biological respiration: within 48 hours, 20% of his produce spoils, forcing him into distress sales at the local mandi. Smallholders don't need another generic weather forecast; they need an affordable system that solves the water, energy, and market equation simultaneously."*
-
----
-
-### Slide 3: The FarmKind Solution Framework
-**Headline:** Closed-Loop Agro-Intelligence Combined with Shared Clean-Energy Infrastructure
+### Slide 2: The Smallholder Problem Context — The Human Reality
+**Headline:** The Silent Struggle of 120 Million Indian Smallholders
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                     FARMKIND CLOSED-LOOP ARCHITECTURE                           │
+│              MEET RAMESH — 3.5-Acre Tomato Farmer (Nashik, Maharashtra)         │
+│              [Representative Smallholder Scenario Grounded in Field Reality]    │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│   [ SENSOR TELEMETRY ] ───► [ AGRO-INTELLIGENCE ] ───► [ ACTION & SAVINGS ]     │
-│    • Soil Moisture %         • FAO-56 Penman-Monteith   • Auto RainGuard Shutoff│
-│    • Crop Kc Stage           • Q10 Respiration Model    • Shared Solar Pumping  │
-│    • Hyper-local Rain        • Mandi Net Price Logic    • Pre-booked Cold Chain │
+│  💧 WATER:        "I don't know exactly when to irrigate."                      │
+│                   Unmetered flood irrigation wastes 35%+ of scarce groundwater. │
+│                                                                                 │
+│  ⛽ ENERGY:       "Diesel is eating all my working capital."                    │
+│                   Erratic grid power forces rental of 5HP diesel pump sets.     │
+│                                                                                 │
+│  🍅 WASTE:        "By the time my tomatoes reach the mandi, they lose value."   │
+│                   Midday heat causes 15%–20% post-harvest spoilage in transit.  │
+│                                                                                 │
+│  🚜 ACCESS:       "I cannot afford to buy a ₹3 Lakh solar pump or cold room."   │
+│                   Modern clean-energy technology remains locked behind CapEx.   │
+│                                                                                 │
+│  📶 CONNECTIVITY: "My internet drops constantly when I am in the field."        │
+│                   Complex cloud apps freeze and become useless in rural fields. │
 │                                                                                 │
 ├─────────────────────────────────────────────────────────────────────────────────┤
-│              THREE SPECIALIZED INTELLIGENCE & ACTION MODULES                    │
-├───────────────────────────┬───────────────────────────┬───────────────────────────┤
-│ 1. SOIL & IRRIGATION HUB  │ 2. SHARED RESOURCE MARKET │ 3. POST-HARVEST SHIELD    │
-│ Closed-loop moisture      │ Pay-per-use access to     │ Dynamic shelf-life decay  │
-│ optimization; cuts water  │ 5HP solar micro-grids &   │ tracking; routes produce  │
-│ by 33.3% using FAO-56.    │ community cold storage.   │ to storage vs. mandi.     │
-└───────────────────────────┴───────────────────────────┴───────────────────────────┘
+│  CORE INSIGHT:                                                                  │
+│  "His problem is not a lack of information.                                     │
+│   It is the lack of an affordable system that turns information into action."   │
+└─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-#### What Makes the Solution Unique:
-- **Software as an Access Orchestrator:** Instead of selling physical machines, FarmKind enables fractional booking of existing community solar assets (PM-KUSUM pumps, FPO cold rooms).
-- **Savings-First Customer Psychology:** FarmKind always proves **Immediate Cash Saved** before showing ecological or carbon metrics.
-- **Edge Resilience:** Built on a zero-overhead local mutation engine that queues actions offline and reconciles with idempotency upon reconnection.
+#### National Problem Context (Underlying Reality):
+- Indian agriculture employs >40% of the workforce and consumes nearly 90% of freshwater withdrawals.
+- 8.5 million+ diesel pump sets burn expensive fossil fuel, driving carbon emissions and rural debt.
+- Perishable horticulture experiences 15% to 20% post-harvest loss due to absent cold chains.
+- Distributed solar power has expanded across India, but smallholders lack the **software and business model** to access it fractionally.
 
 #### Verbatim 60-Second Speaker Script:
-> *"FarmKind bridges the gap between clean energy and smallholder reality. We do this through three interconnected modules:
-> First, our **Soil & Irrigation Intelligence** calculates crop evapotranspiration using FAO-56 agronomic standards. When soil moisture drops below 30%, it schedules precision watering, but automatically holds irrigation if hyper-local rainfall probability exceeds 75%.
-> Second, our **Shared Clean-Energy Hub** replaces costly diesel rentals with community solar micro-grids at just ₹60 per hour, cutting irrigation operating costs by 67%.
-> Third, our **Post-Harvest Shield** uses biological Q10 respiration modeling to calculate exact spoilage hours, directing the farmer whether to sell immediately or store in an FPO solar cold room. All of this is accessed through a low-bandwidth, voice-first vernacular interface."*
+> *"Meet Ramesh. Ramesh farms 3.5 acres of tomatoes in Nashik.
+> 
+> Like 86% of Indian farmers, Ramesh's landholding is small, his margins are thin, and his days are filled with uncertainty. When the weather gets hot, he asks: 'Do I pump water today, or wait?' When the power cuts out at midnight, he is forced to rent a polluting diesel pump at ₹160 an hour just to keep his crop alive. And when harvest comes, extreme midday heat triggers rapid spoilage, forcing him to accept whatever price the mandi offers.
+> 
+> Ramesh doesn't need an SMS telling him that it's hot. 
+> 
+> **His problem is not a lack of information. It is the lack of an affordable system that turns information into action.**
+> That is the precise bottleneck FarmKind was built to break."*
 
 ---
 
-### Slide 4: Alignment to the Competition Challenge
-**Headline:** Direct, Point-by-Point Alignment to National Agricultural & Energy Priorities
+### Slide 3: The FarmKind Reveal — From Context to Value
+**Headline:** The Closed-Loop Engine: Turning Farm Data into Confident Action
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                             THE FARMKIND TRANSFORMATION                         │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│   FARM DATA & CONTEXT                                                           │
+│   Soil Moisture · Ambient Temp · Satellite Rain · Crop Stage · Farmer Voice     │
+│                                                                                 │
+│                                        ▼                                        │
+│   FARMKIND INTELLIGENCE                                                         │
+│   FAO-56 Evapotranspiration · RainGuard Hold · Q10 Respiration · Mandi Spreads  │
+│                                                                                 │
+│                                        ▼                                        │
+│   SHARED CLEAN ACTION                                                           │
+│   Automated Irrigation Hold · Shared Solar Pumping · Cold Room Hub Reservation  │
+│                                                                                 │
+│                                        ▼                                        │
+│   MEASURABLE VALUE                                                              │
+│   💧 Less Water     ·     ⛽ Less Diesel     ·     💰 Less Cost     ·     🍅 Less Waste │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
+```
+
+#### The Four Core Protectors:
+1. **Soil & Irrigation Intelligence:** Continuously evaluates root-zone moisture matric potential against FAO-56 crop curves, preventing over-watering and root rot.
+2. **Shared Clean-Energy Access:** Unlocks nearby community solar pumps at ₹60/hour pay-as-you-go, displacing expensive diesel rentals.
+3. **Harvest Preservation Shield:** Biological decay tracking (Q10 index) predicting spoilage hours and routing crates to nearby solar cold rooms.
+4. **Mitra Voice Guidance:** 24/7 bilingual voice interaction in Hindi and Marathi, enabling effortless two-way conversation for farmers of any literacy level.
+
+#### Verbatim 60-Second Speaker Script:
+> *"Here is the breakthrough: FarmKind closes the loop between data, clean energy, and action.
+> 
+> When soil probes or field inputs record that moisture is dropping, our intelligence doesn't stop at drawing a chart. It combines soil status with crop growth stage and hyper-local precipitation forecasts. 
+> 
+> If rain is coming within 8 hours, it actively holds irrigation, saving water and money. When water is truly needed, it doesn't ask the farmer to start a diesel engine—it allows him to book a shared community solar pump with a single voice command. 
+> 
+> And when harvest arrives, it tracks biological decay rates to route produce into shared cold storage before rot sets in.
+> 
+> Data leads to Intelligence. Intelligence leads to Clean Action. Clean Action delivers Measurable Value."*
+
+---
+
+### Slide 4: Why FarmKind Fits India
+**Headline:** Designed Around the Real Constraints of Indian Smallholders
 
 ```
 ┌───────────────────────────────────┬───────────────────────────────────────────┐
-│ NATIONAL CHALLENGE PRIORITY       │ FARMKIND DIRECT ARCHITECTURAL RESPONSE    │
+│ SMALLHOLDER CONSTRAINT            │ FARMKIND DESIGN RESPONSE                  │
 ├───────────────────────────────────┼───────────────────────────────────────────┤
-│ 1. Groundwater Depletion &        │ FAO-56 moisture monitoring + RainGuard    │
-│    Over-Irrigation                │ prevents over-watering; saves 1.63M L/mo. │
+│ Small Landholdings (<2 Hectares)  │ Shared / rental access to community pumps │
+│                                   │ instead of individual machinery ownership.│
 ├───────────────────────────────────┼───────────────────────────────────────────┤
-│ 2. High Carbon & Cost of Diesel   │ Fractional booking of 5HP community solar │
-│    Pumping Sets                   │ pumps; completely eliminates diesel burn. │
+│ Limited Purchasing Power          │ Zero CapEx; fractional pay-as-you-go      │
+│                                   │ micro-rentals (e.g. ₹60/hour solar pump). │
 ├───────────────────────────────────┼───────────────────────────────────────────┤
-│ 3. Severe Climate Volatility &    │ Agrometeorological forecasting engine     │
-│    Unseasonal Rains               │ dynamically adjusts daily irrigation etc. │
+│ Unreliable & Intermittent 2G/4G   │ Low-bandwidth architecture + persistent   │
+│                                   │ offline queue with idempotency.           │
 ├───────────────────────────────────┼───────────────────────────────────────────┤
-│ 4. 15%–20% Post-Harvest Losses    │ Q10 respiration engine predicts rot hours │
-│    in Perishables                 │ and books nearby solar cold storage slots.│
+│ Limited Digital Literacy          │ Conversational voice interface in native  │
+│                                   │ languages (Hindi, Marathi, English).      │
 ├───────────────────────────────────┼───────────────────────────────────────────┤
-│ 5. Lack of Real-Time Information  │ Ground IoT telemetry integration with     │
-│    & Crop Stress Data             │ clear visual thresholds & voice alerts.   │
+│ High Pumping & Input Costs        │ 'Savings-First' decision logic: proves    │
+│                                   │ rupee savings before promoting clean tech.│
 ├───────────────────────────────────┼───────────────────────────────────────────┤
-│ 6. Inability to Afford CapEx      │ Shared rental marketplace partnering with │
-│    Infrastructure                 │ FPOs and PM-KUSUM solar asset owners.     │
+│ Post-Harvest Spoilage Risk        │ Biological decay tracking (Q10) connects  │
+│                                   │ farmer to nearby FPO solar cold storage.  │
 ├───────────────────────────────────┼───────────────────────────────────────────┤
-│ 7. Low Digital Literacy & Sparse  │ Mitra Multilingual Voice AI + True        │
-│    Rural Connectivity             │ Offline Queue with idempotency engine.    │
+│ Climate Volatility (Erratic Rain) │ Data-driven agrometeorological triggers   │
+│                                   │ prevent wasteful pumping before rain.     │
 └───────────────────────────────────┴───────────────────────────────────────────┘
 ```
 
+#### Design Philosophy:
+> *"FarmKind was designed around the farmer from day one, not adapted to the farmer afterward."*
+
 #### Verbatim 60-Second Speaker Script:
-> *"Every single line of code in FarmKind is a direct response to the national challenge criteria. When the challenge identifies groundwater overdraft, FarmKind responds with automated root-zone moisture targeting. When the challenge highlights diesel pollution, FarmKind operationalizes PM-KUSUM solar assets through fractional micro-rentals. 
->
-> When the challenge points to the digital divide and spotty rural connectivity, FarmKind responds with native Hindi and Marathi voice intelligence and an offline synchronization queue that survives browser refreshes and network dropouts. This is not an imported platform forced onto Indian farms; it is an indigenous architecture mapped directly to national priorities."*
+> *"Why have so many ag-tech apps failed in rural India? Because they were built for commercial farms in California and retrofitted for India with a translation file.
+> 
+> A 3-acre farmer cannot invest ₹3 Lakhs in private machinery—so FarmKind enables shared community rental.
+> A farmer with rough hands in a dusty field struggles with tiny dropdown menus—so FarmKind provides natural voice interaction in Hindi and Marathi.
+> A farmer working in a connectivity blackspot cannot wait for a heavy web app to load—so FarmKind queues actions safely on his phone and syncs automatically when signal returns.
+> 
+> Every architectural choice in FarmKind is a direct response to a real smallholder constraint."*
 
 ---
 
-### Slide 5: System Architecture & Three Core Flows
-**Headline:** Complete System Architecture Highlighting Independent Data, Energy, and Financial Flows
+### Slide 5: System Architecture — Three Unified Flows
+**Headline:** One Architecture Uniting Data Intelligence, Solar Energy, and Farmer Cash Flow
 
 ```
-                   ┌─────────────────────────────────────────────────────────────┐
-                   │                     DATA FLOW LAYER                         │
-                   │  IoT Probes + IMD Weather + Crop Kc + Farmer Voice Input   │
-                   └──────────────────────────────┬──────────────────────────────┘
-                                                  ▼
-                   ┌─────────────────────────────────────────────────────────────┐
-                   │               FARMKIND AGRO-INTELLIGENCE CORE               │
-                   │  - FAO-56 Penman-Monteith Net Water Calculation             │
-                   │  - Q10 Respiration Index & Spoilage Curve Evaluator         │
-                   │  - True Offline Queue with Idempotent Auto-Sync Engine      │
-                   │  - Gemini 2.0 Flash Live Voice + Indian Web Speech TTS      │
-                   └──────────────────────────────┬──────────────────────────────┘
-                                                  ▼
-                   ┌─────────────────────────────────────────────────────────────┐
-                   │                CLOSED-LOOP ACTION TRIGGERS                  │
-                   │  Irrigation Scheduling · Cold Slot Reservation · Logistics  │
-                   └──────────────────────────────┬──────────────────────────────┘
-                                                  │
-                 ┌────────────────────────────────┴────────────────────────────────┐
-                 ▼                                                                 ▼
-┌─────────────────────────────────┐                             ┌─────────────────────────────────┐
-│        ENERGY FLOW LAYER        │                             │        MONEY FLOW LAYER         │
-├─────────────────────────────────┤                             ├─────────────────────────────────┤
-│ • 100% Off-Grid Solar PV Array  │                             │ • Farmer avoids ₹18,416 diesel  │
-│ • Powers 5HP Community Pump     │                             │   operating expenses.           │
-│ • Energizes 10-Tonne Cold Room  │                             │ • Farmer pays ₹6,000 shared fee │
-│ • Displaces 167.5 L diesel/mo.  │                             │   to local FPO / Solar owner.   │
-│ • Net Zero Operating Emissions  │                             │ • Net Farmer Savings: +₹12,416  │
-└─────────────────────────────────┘                             └─────────────────────────────────┘
+                         ┌─────────────────────────────────────────┐
+                         │               DATA FLOW                 │
+                         │  Soil Probes + IMD Weather + Crop Kc   │
+                         │  + Farmer Voice (Mitra)                 │
+                         └────────────────────┬────────────────────┘
+                                              ▼
+                         ┌─────────────────────────────────────────┐
+                         │       FARMKIND INTELLIGENCE CORE        │
+                         │  - FAO-56 Penman-Monteith Net Water     │
+                         │  - RainGuard Precipitation Hold Logic   │
+                         │  - Q10 Respiration & Spoilage Evaluator │
+                         │  - True Offline Queue with Idempotency  │
+                         └────────────────────┬────────────────────┘
+                                              ▼
+                         ┌─────────────────────────────────────────┐
+                         │        INTELLIGENT DECISION & ACT       │
+                         └──────────────┬──────────────────┬───────┘
+                                        │                  │
+                 ┌──────────────────────┴───────┐   ┌──────┴──────────────────────┐
+                 ▼                              ▼   ▼                             ▼
+┌─────────────────────────────────┐               ┌─────────────────────────────────┐
+│           ENERGY FLOW           │               │           MONEY FLOW            │
+├─────────────────────────────────┤               ├─────────────────────────────────┤
+│ • 100% Off-Grid Solar PV Array  │               │ • Farmer avoids ₹18,416 diesel  │
+│ • Powers 5HP Community Pump     │               │   monthly pumping costs.        │
+│ • Energizes Micro-Cold Room     │               │ • Farmer pays ₹6,000 shared fee │
+│ • Displaces 167.5 L diesel/mo.  │               │   to local FPO / Solar owner.   │
+│ • Net Zero Operating Emissions  │               │ • Net Farmer Savings: +₹12,416  │
+└─────────────────────────────────┘               └─────────────────────────────────┘
 ```
 
-#### Detailed Flow Breakdown:
-1. **DATA FLOW:** Soil moisture sensors and open agrometeorological APIs stream parameters into the deterministic FarmKind engine. In offline fields, mutations are recorded locally in `localStorage` under `X-Idempotency-Key` and synchronously flush to the backend upon network restoration.
-2. **ENERGY FLOW:** Clean photovoltaic energy from community solar micro-grids directly drives high-efficiency submersible pumps and cooling compressors, entirely bypassing fossil fuels and grid blackouts.
-3. **MONEY FLOW:** The farmer pays a modest fractional usage fee (₹60/hr or ₹6,000/mo) to the FPO or solar provider. The farmer immediately retains **₹12,416 in net monthly cash savings**, creating a self-sustaining commercial ecosystem.
+#### Architectural Truths:
+- **DATA FLOW:** Ground sensor readings, satellite precipitation forecasts, and farmer voice input feed into our deterministic engine. In offline fields, mutations are secured in local browser storage under `X-Idempotency-Key` and reconciled without duplicates upon reconnection.
+- **ENERGY FLOW:** Distributed photovoltaic solar power energizes high-efficiency submersible pumps and micro-cold rooms during daylight hours, replacing polluting diesel engines.
+- **MONEY FLOW:** The farmer replaces an expensive, volatile expense (diesel fuel + maintenance) with an affordable shared-service fee, retaining **₹12,416/month in net cash savings**.
 
 #### Verbatim 60-Second Speaker Script:
-> *"Here you see the unified heartbeat of FarmKind across three distinct flows:
-> In the **Data Flow**, field telemetry and IMD satellite weather feed into our deterministic agro-intelligence core. Even when network connectivity is zero, our offline engine logs commands safely.
-> In the **Energy Flow**, clean, distributed solar energy from village micro-grids powers irrigation pumps and micro-cold rooms during daylight hours when crops need water most.
-> And crucially, in the **Money Flow**, we turn capital expenditure into an affordable operational expense. The farmer pays an accessible hourly rental fee to the local FPO, saving over ₹12,000 in cash every single month compared to burning diesel. Clean energy succeeds only when it is more profitable than fossil fuels."*
+> *"Behind FarmKind is a clear, disciplined architecture operating across three synchronized flows:
+> 
+> In the **Data Flow**, field inputs and meteorological forecasts feed into our agro-intelligence core. Even when network connectivity is lost in the field, our offline queue logs transactions safely.
+> In the **Energy Flow**, distributed solar micro-grids convert midday sunlight into high-discharge irrigation and cold-chain refrigeration—zero diesel, zero grid blackouts.
+> In the **Money Flow**, we turn an unaffordable capital expense into a lightweight operational fee. The farmer pays ₹60 an hour to the local FPO or solar owner, cutting his pumping bill by over 60% and putting ₹12,000 back into his family's savings every month."*
 
 ---
 
-### Slide 6: The Smallholder User Journey
-**Headline:** From Problem to Verifiable Savings: A Transparent, 6-Step Closed-Loop Flow
+### Slide 6: The Smallholder User Journey — The Hero Slide
+**Headline:** From Problem to Verifiable Savings: A 6-Step Closed-Loop Flow
 
 ```
 ┌───────────┐      ┌───────────┐      ┌───────────┐      ┌───────────┐      ┌───────────┐      ┌───────────┐
-│ 1. NEED   │ ───► │ 2. COST   │ ───► │ 3. DATA   │ ───► │ 4. AI     │ ───► │ 5. ACTION │ ───► │ 6. VALUE  │
-│ IDENTIFY  │      │ COMPARE   │      │ TELEMETRY │      │ DECISION  │      │ EXECUTION │      │ HARVESTED │
+│ 1. NEED   │ ───► │ 2. COST   │ ───► │ 3. DATA   │ ───► │ 4. DECIDE │ ───► │ 5. ACT    │ ───► │ 6. OUTCOME│
 └───────────┘      └───────────┘      └───────────┘      └───────────┘      └───────────┘      └───────────┘
-   Farmer             Current            Soil probe         RainGuard           1-Tap / Voice      Farmer saves
-   observes           diesel cost:       reads 24%;         calculates          booking of         ₹12,416 cash;
-   wilted soil        ₹18,416/mo.        rain forecast      78% rain chance     shared solar       1.63M L water;
-   & upcoming         Shared solar:      shows high         → Defers pump       pump; routes       produce decay
-   harvest.           ₹6,000/mo.         precipitation.     to save ₹450.       tomatoes to cold.  prevented.
+  Soil feels         Current cost:      Probe: 24% VWC.    RainGuard:         1-Tap / Voice      Optimal soil;
+  dry during         ₹18,416 diesel.    Temp: 36°C.        78% rain chance    booking of         12,000 L water
+  fruit setting.     Shared solar:      Forecast: 18mm     → Hold pumping     shared solar       saved; zero
+                     ₹6,000.            within 8 hours.    to save ₹450.      pump next day.     diesel burned.
+                     Save: ₹12,416!
 ```
 
-#### Step-by-Step Experience Walkthrough:
-1. **Farmer Need:** Farmer Ramesh notices soil drying out during the critical fruit-setting stage and prepares to irrigate.
-2. **Savings-First Cost Comparison:** FarmKind displays his current cost (₹18,416/mo diesel) versus the community solar alternative (₹6,000/mo), highlighting **₹12,416 in immediate monthly savings**.
-3. **Data & Context:** Capacitive soil probe reads 24% moisture (critical threshold: 30%). Ambient temperature is 36°C.
-4. **Agro-Intelligence Decision:** The engine evaluates satellite forecast: 78% probability of 18mm rainfall within 8 hours. Rather than irrigating blindly, the engine issues a **RainGuard Hold Alert**, saving 12,000 liters of water and ₹450 in pump rental.
-5. **Action:** Next morning, when soil remains below target, farmer books a 2-hour solar pump slot via 1-tap Hindi voice command (`"सोलर पंप 2 घंटे के लिए बुक करें"`).
-6. **Measurable Outcome:** Soil moisture restored to optimal 35%; zero diesel burned; harvest routed to cold storage before market price surge.
+#### The "Savings-First" Psychology:
+1. **NEED:** Farmer observes drying topsoil during mid-season fruit enlargement.
+2. **SAVINGS-FIRST COST COMPARE:** FarmKind displays his current cost (₹18,416/mo diesel) versus the community solar option (₹6,000/mo), highlighting **₹12,416 in immediate monthly savings**.
+3. **DATA & CONTEXT:** Capacitive soil probe reads 24% volumetric water content; satellite weather indicates 78% probability of rain within 8 hours.
+4. **DECIDE (RainGuard):** Engine detects incoming rain and automatically issues a **RainGuard Hold Alert**, preventing ₹450 in wasted pumping costs.
+5. **ACT:** When soil remains dry the following morning, farmer books a 2-hour solar pump slot via Hindi voice command: *"सोलर पंप 2 घंटे के लिए बुक करें"*.
+6. **OUTCOME:** Soil moisture restored to optimal 35%; zero diesel burned; harvest routed to cold room.
 
 #### Verbatim 60-Second Speaker Script:
-> *"Notice how the farmer's journey is anchored in real psychology. We never start with carbon emissions. We start with the farmer's financial pain. In Step 2, Ramesh sees that switching to shared solar will put ₹12,416 back in his pocket every month. 
->
-> In Step 3 and 4, our intelligence prevents costly mistakes: when Ramesh feels like running the pump, FarmKind checks satellite data and tells him in clear Marathi: 'Heavy rain is coming in 6 hours. Hold irrigation.' That single decision saves him ₹450. When he does need water, Step 5 allows him to book a community solar pump with a single voice confirmation. Input leads to Intelligence, Intelligence triggers Action, and Action produces Quantified Value."*
+> *"Notice the deliberate psychology of this journey:
+> We do not begin by preaching about carbon footprints. We begin with the farmer's wallet.
+> 
+> In Step 2, Ramesh sees that switching to shared solar will put ₹12,416 back into his hands every single month.
+> In Step 3 and 4, FarmKind prevents a costly mistake: when Ramesh feels like running the pump, FarmKind checks satellite data and tells him in clear Marathi: 'Heavy rain is coming this evening. Hold irrigation.' That single decision saves him ₹450. 
+> 
+> When water is genuinely needed, Step 5 allows him to book a community solar pump with a single voice confirmation. 
+> 
+> Input leads to Intelligence. Intelligence leads to Clean Action. Clean Action delivers Measurable Value."*
 
 ---
 
-### Slide 7: Supporting Design Artifacts & Software Prototype Evidence
-**Headline:** Functional, Tested Software Prototype Validating the Full End-to-End Experience
+### Slide 7: Real Product Artifacts & Software Prototype Evidence
+**Headline:** A Functional, Tested Software Prototype Validating the Complete Farmer Experience
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                    ACTUAL WORKING PROTOTYPE UI SCREENS                          │
-├───────────────────────────┬───────────────────────────┬───────────────────────────┤
-│ SCREEN 1: FARM BASELINE   │ SCREEN 2: COMMAND CENTER  │ SCREEN 3: CLEAN ENERGY HUB│
-│ Displays acreage (3.5 ac),│ Real-time soil moisture   │ Solar pump slot booking,  │
-│ crop (Tomato), flood vs.  │ (34%), RainGuard alert    │ diesel vs. solar cost     │
-│ drip water use, and costs.│ (78% rain), Kc curve.     │ breakdown, ₹12,416 savings│
-├───────────────────────────┼───────────────────────────┼───────────────────────────┤
-│ SCREEN 4: TOPOLOGY        │ SCREEN 6: HARVEST SHIELD  │ SCREEN 7: IMPACT & PRIDE  │
-│ Farm digital twin, probe  │ Q10 respiration decay,    │ Verified 1.63M L water    │
-│ telemetry status, solar   │ spoilage curves, cold-room│ saved, 167.5 L diesel     │
-│ pump node connectivity.   │ booking vs. mandi routing.│ avoided, farmer certificate│
-└───────────────────────────┴───────────────────────────┴───────────────────────────┘
+│              ACTUAL WORKING PROTOTYPE UI SCREENS (REACT 19 + NODE)              │
+├───────────────────────────┬───────────────────────────┬─────────────────────────┤
+│ 1. BEFORE (BASELINE)      │ 2. UNDERSTAND (SENSORS)   │ 3. DECIDE (RAINGUARD)   │
+│ Screen1Baseline.tsx       │ Screen2CommandCenter.tsx  │ Screen2CommandCenter.tsx│
+│ Shows 3.5-acre plot,      │ Live root-zone moisture   │ RainGuard evaluates 78% │
+│ tomato crop stage, and    │ (34%), canopy temperature,│ rain risk and issues an │
+│ ₹18,416 diesel cost.      │ and FAO-56 Kc crop curve. │ automated pump hold.    │
+├───────────────────────────┼───────────────────────────┼─────────────────────────┤
+│ 4. ACCESS (SOLAR HUB)     │ 5. ACT (VOICE & QUEUE)    │ 6. AFTER (SAVINGS)      │
+│ Screen3Resources.tsx      │ MitraVoiceModal.tsx       │ Screen7Impact.tsx       │
+│ Pay-per-use community     │ Hindi/Marathi voice AI +  │ Verified 1.63M L water  │
+│ solar pump & cold room    │ persistent offline queue  │ saved, 167.5 L diesel   │
+│ reservation cards.        │ with idempotent replay.   │ avoided, certificate.   │
+└───────────────────────────┴───────────────────────────┴─────────────────────────┘
 ```
 
-#### Real Prototype Implementation Metrics:
-- **Zero Physical Hardware Claims:** Software prototype runs on real agronomic and meteorological data; no physical manufacturing required or claimed.
-- **12 Automated Test Suites / 136 Tests Passing:** Verified with Vitest covering responsive design, multilingual voice, offline sync engine, and FAO-56 math.
-- **Production Build:** Fully compiled client bundle (Vite + React 19 + TypeScript) and Express/Node.js REST server.
-- **True Offline Queue:** Implemented with `localStorage` FIFO queue, retry backoff, and idempotent deduplication (`X-Idempotency-Key`).
+#### Transparent Software Implementation Status:
+- **[VERIFIED IMPLEMENTATION]:** Functional software prototype built with React 19, TypeScript, and Node.js.
+- **[VERIFIED IMPLEMENTATION]:** 12 automated test suites comprising **136 tests passing** with zero errors (`vitest run`).
+- **[VERIFIED IMPLEMENTATION]:** Dual voice engine combining Google Gemini 2.0 Flash backend with Indian Web Speech TTS fallback.
+- **[VERIFIED IMPLEMENTATION]:** True Offline Queue in `localStorage` with `X-Idempotency-Key` headers preventing duplicate bookings.
+- **CREDIBILITY COMMITMENT:** Zero physical hardware manufactured or claimed; all calculations run on verified software models.
 
 #### Verbatim 60-Second Speaker Script:
-> *"Judges, what you see here are not conceptual Figma wireframes. These are live screenshots from our fully functioning software prototype running on React 19, TypeScript, and Node.js. 
+> *"Judges, what you see here are not conceptual mockups. These are live screenshots from our fully functioning software prototype running on React 19, TypeScript, and Node.js.
 > 
-> Across Screen 1 to Screen 7, every calculation is executed by our live engine. In Screen 2, our Command Center actively visualizes real-time moisture matric curves. In Screen 3, our Clean Energy Hub executes solar pump slot reservations with automated server deduplication. In Screen 6, our Harvest Shield models biological spoilage using real Q10 respiration coefficients. 
+> In Screen 1, our Baseline reveals the farmer's hidden diesel bleed. In Screen 2, our Command Center visualizes real-time moisture matric curves. In Screen 3, our Clean Energy Hub executes solar pump slot reservations with automated server deduplication. In Screen 5, our Mitra Voice AI understands spoken Hindi and Marathi, backed by an offline queue that stores actions safely when internet drops.
 > 
-> Our entire codebase has been validated through 12 rigorous automated test suites comprising 136 tests passing with zero errors. The system is built, tested, and ready for deployment."*
+> Our entire codebase has been verified through 12 automated test suites comprising 136 tests passing with zero errors. The software is real, robust, and pilot-ready."*
 
 ---
 
 ### Slide 8: System-Level Innovations
-**Headline:** 5 Defensible Architectural Breakthroughs Separating FarmKind from Generic Agri-Tech
+**Headline:** 5 Grounded Innovations Tailored to Rural Realities
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
 │                    FARMKIND SYSTEM-LEVEL INNOVATION MATRIX                      │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
-│   1. ACCESS OVER OWNERSHIP ──────► Fractional, pay-per-use community clean      │
-│                                    tech replaces unaffordable ₹3 Lakh CapEx.    │
+│   1. ACCESS OVER OWNERSHIP ──────► Fractional, pay-per-use community solar      │
+│                                    replaces unaffordable ₹3 Lakh CapEx debt.    │
 │                                                                                 │
-│   2. SAVINGS-FIRST PSYCHOLOGY ───► Proves net rupee savings before promoting    │
-│                                    sustainability, aligning with farmer reality.│
+│   2. SAVINGS-FIRST INTELLIGENCE ─► Proves net rupee savings before promoting    │
+│                                    clean technology, aligning with self-interest│
 │                                                                                 │
-│   3. MONITOR ➔ UNDERSTAND     ───► Replaces passive SMS warnings with closed-   │
-│      ➔ DECIDE ➔ ACT                loop autonomous scheduling & slot execution. │
+│   3. MONITOR ➔ UNDERSTAND     ───► Replaces passive SMS advice with closed-loop │
+│      ➔ DECIDE ➔ ACT                actionable scheduling and automated holds.   │
 │                                                                                 │
-│   4. MULTI-SERVICE SOLAR HUB ───► Transforms single-use solar pumps into multi- │
-│                                    purpose hubs (pumping, cold storage, drying).│
+│   4. MULTI-SERVICE SOLAR HUB ────► Transforms seasonal solar pumps into year-   │
+│                                    round micro-cold rooms and drying hubs.      │
 │                                                                                 │
-│   5. RESILIENT RURAL UX      ───► Voice-first vernacular interface + persistent │
-│                                    offline queue that survives network cuts.    │
+│   5. RURAL-PROOF EXPERIENCE   ───► Conversational voice in native tongues with  │
+│                                    offline queue surviving connectivity drops.  │
 │                                                                                 │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-#### Detailed Innovation Analysis:
-1. **Access Over Ownership:** Eliminates the CapEx barrier by creating a software orchestration layer over shared PM-KUSUM community solar infrastructure and FPO cold rooms.
-2. **Savings-First Decision Logic:** Unlike typical ESG apps that preach environmental conservation, FarmKind leads with financial self-interest: *Cost → Alternative → Rupee Savings → Environmental Benefit*.
-3. **M-U-D-A Paradigm:** Shifts agriculture from information overload to automated assistance:
-   - *Monitor:* Soil probe reads 24% moisture.
-   - *Understand:* Crop is at mid-season fruit stage (Kc = 1.15); water deficit imminent.
-   - *Decide:* Rain probability is only 15%; immediate irrigation required.
-   - *Act:* Pre-book 2-hour solar pump slot at 10:00 AM; alert farmer via voice prompt.
-4. **Shared Clean-Energy Ecosystem:** Unlocks higher ROI for solar asset owners by utilizing solar power across pumping, cold storage, and produce drying.
-5. **Native Vernacular Voice & Offline Engine:** Features bidirectional voice in Hindi and Marathi powered by Google Gemini 2.0 Flash with local Web Speech TTS fallback and an idempotent offline queue.
-
 #### Verbatim 60-Second Speaker Script:
-> *"Why has ag-tech struggled in rural India? Because tech companies tried to sell expensive hardware to broke farmers, or offered passive SMS advice that farmers couldn't act on.
+> *"We do not call FarmKind innovative because it uses AI. We call it innovative because it redesigns the agricultural delivery system.
 > 
-> FarmKind delivers five system-level innovations:
-> First, **Access Over Ownership**: we don't ask a 2-acre farmer to buy a 3-lakh solar pump; we let him rent it for ₹60 an hour.
-> Second, **Savings-First Psychology**: we show him the ₹12,000 he saves before mentioning carbon.
-> Third, **Closed-Loop Execution**: our engine doesn't just display graphs—it calculates evapotranspiration and books the pump slot.
-> Fourth, **Multi-Service Solar**: we turn solar pumps into 24/7 community cold-storage and processing hubs.
-> And fifth, **Rural-Proof UX**: natural voice in his mother tongue with an offline queue that never loses an order when cell towers fail."*
+> First, **Access Over Ownership**: instead of asking a smallholder to take a bank loan for a solar pump, we let him rent community solar infrastructure for ₹60 an hour.
+> Second, **Savings-First Intelligence**: we prove the ₹12,000 he saves before ever mentioning sustainability.
+> Third, **Closed-Loop Action**: we don't send ambiguous text messages; we evaluate evapotranspiration and book the pump.
+> Fourth, **Multi-Service Solar**: we turn seasonal solar pumps into year-round cold storage and drying hubs.
+> And fifth, **Rural-Proof Experience**: vernacular voice with an offline engine that never loses a booking when network towers cut out."*
 
 ---
 
-### Slide 9: Quantified Benefit & Rigorous Impact Metrics
-**Headline:** Transparent Agronomic Baseline vs. FarmKind Intervention (3.5-Acre Tomato Plot)
+### Slide 9: Quantified Impact — Trustworthy & Modeled
+**Headline:** Rigorous Baseline vs. FarmKind Intervention (3.5-Acre Tomato Scenario)
 
 ```
-┌───────────────────────────┬───────────────────────────┬───────────────────────────┬─────────────┐
-│ PERFORMANCE DIMENSION     │ TRADITIONAL BASELINE      │ FARMKIND SMART ENGINE     │ NET IMPACT  │
-├───────────────────────────┼───────────────────────────┼───────────────────────────┼─────────────┤
-│ 1. Monthly Water Use      │ 4,886,580 Liters          │ 3,257,720 Liters          │ -33.3%      │
-│    (Gross Irrigation)     │ (Flood: 60% efficiency)   │ (Precision: 90% efficiency)│ (-1.63M L)  │
-├───────────────────────────┼───────────────────────────┼───────────────────────────┼─────────────┤
-│ 2. Diesel Consumption     │ 167.54 Liters / month     │ 0.00 Liters / month       │ -100.0%     │
-│    (5HP Pumping Hours)    │ (139.6 hours @ 1.2 L/hr)  │ (100% Shared Solar Power) │ (-167.5 L)  │
-├───────────────────────────┼───────────────────────────┼───────────────────────────┼─────────────┤
-│ 3. Monthly Operating Cost │ ₹18,416 / month           │ ₹6,000 / month            │ -67.4%      │
-│    (Fuel + Maintenance)   │ (₹15,916 fuel + ₹2,500 op)│ (Shared Solar Service Fee)│ (+₹12,416)  │
-├───────────────────────────┼───────────────────────────┼───────────────────────────┼─────────────┤
-│ 4. Post-Harvest Spoilage  │ 20.0% Spoilage Loss       │ 5.0% Controlled Loss      │ -75.0%      │
-│    (Perishable Produce)   │ (Uncooled field transit)  │ (Pre-booked Solar Cold Hub)│ (15% saved) │
-├───────────────────────────┼───────────────────────────┼───────────────────────────┼─────────────┤
-│ 5. Annual Cash Retained   │ ₹0 (baseline expenses)    │ ₹1,48,992 / year          │ +₹1.49 Lakh │
-│    per Smallholder Farm   │ (High operating friction) │ (Pumping savings alone)   │ Net Income  │
-└───────────────────────────┴───────────────────────────┴───────────────────────────┴─────────────┘
+┌───────────────────────────┬───────────────────────────┬───────────────────────────┬─────────────────┐
+│ IMPACT DIMENSION          │ MODELED BASELINE          │ FARMKIND PILOT SCENARIO   │ MODELED BENEFIT │
+├───────────────────────────┼───────────────────────────┼───────────────────────────┼─────────────────┤
+│ 💧 Monthly Water Use      │ 4,886,580 Liters          │ 3,257,720 Liters          │ -33.3%          │
+│    (Gross Irrigation)     │ (Flood: 60% efficiency)   │ (Drip: 90% efficiency)    │ (-1.63M Liters) │
+├───────────────────────────┼───────────────────────────┼───────────────────────────┼─────────────────┤
+│ ⛽ Diesel Fuel Consumed   │ 167.54 Liters / month     │ 0.00 Liters / month       │ -100.0%         │
+│    (5HP Pumping Hours)    │ (139.6 hours @ 1.2 L/hr)  │ (100% Shared Solar Power) │ (-167.5 Liters) │
+├───────────────────────────┼───────────────────────────┼───────────────────────────┼─────────────────┤
+│ 💰 Monthly Operating Cost │ ₹18,416 / month           │ ₹6,000 / month            │ -67.4%          │
+│    (Fuel + Maintenance)   │ (₹15,916 fuel + ₹2,500 op)│ (Shared Solar Service Fee)│ (+₹12,416 cash) │
+├───────────────────────────┼───────────────────────────┼───────────────────────────┼─────────────────┤
+│ 🍅 Post-Harvest Spoilage  │ 20.0% Spoilage Loss       │ 5.0% Controlled Loss      │ -75.0% Relative │
+│    (Perishable Produce)   │ (Uncooled field transit)  │ (Pre-booked Solar Cold Hub)│ (15% Saved)     │
+├───────────────────────────┼───────────────────────────┼───────────────────────────┼─────────────────┤
+│ 📈 Modeled Annual Savings │ ₹0 (baseline expenses)    │ ₹1,48,992 / year          │ +₹1.49 Lakh     │
+│    per Smallholder Farm   │ (High operating friction) │ (Pumping savings alone)   │ Retained Income │
+└───────────────────────────┴───────────────────────────┴───────────────────────────┴─────────────────┘
 ```
 
-#### Mathematical Transparency & Formula Disclosure:
-- **Evapotranspiration ($ET_c$):** $ET_c = ET_o \times K_c = 6.0\text{ mm/day} \times 1.15 = 6.90\text{ mm/day}$ (FAO-56 standard).
-- **Net Daily Water Requirement:** $(6.90 / 1000) \times 14,164\text{ m}^2 \times 1000 = 97,732\text{ Liters/day}$.
-- **Flood Irrigation Gross (60% efficiency):** $97,732 / 0.60 = 162,886\text{ L/day} \times 30\text{ days} = 4,886,580\text{ L/month}$.
-- **Precision Drip Gross (90% efficiency):** $97,732 / 0.90 = 108,591\text{ L/day} \times 30\text{ days} = 3,257,720\text{ L/month}$.
-- **Water Saved:** $4,886,580 - 3,257,720 = \mathbf{1,628,860\text{ Liters/month}}$ (**33.33% reduction**).
-- **Pumping Hours:** $4,886,580\text{ L} / 35,000\text{ L/hr} = 139.62\text{ hours}$.
-- **Diesel Fuel:** $139.62\text{ hrs} \times 1.20\text{ L/hr} = 167.54\text{ Liters} \times ₹95/\text{L} = ₹15,916$ fuel $+ ₹2,500$ oil/maintenance $= \mathbf{₹18,416/\text{month}}$.
-- **Shared Solar Fee:** Assumed pilot rental rate of $\mathbf{₹6,000/\text{month}}$ ($₹60/\text{hr}$ for 100 operating hours).
-- **Net Cash Saved:** $₹18,416 - ₹6,000 = \mathbf{₹12,416/\text{month}}$ ($\mathbf{₹1,48,992/\text{year}}$).
+> **[CREDIBILITY NOTE]:** *Results shown are model-based scenarios using stated agronomic assumptions (FAO-56 standard); field validation across rural clusters is the core milestone of our pilot roadmap.*
 
-*Note: All values are rigorously calculated based on stated FAO-56 reference parameters and modeled assumptions in `src/engine/calculation.ts`.*
+#### Mathematical Formulas & Transparent Constants:
+- **Net Crop Water ($ET_c$):** $ET_o (6.0\text{ mm/day}) \times K_c (1.15) = 6.90\text{ mm/day} \rightarrow 97,732\text{ Liters/day}$ for $14,164\text{ m}^2$ (3.5 acres).
+- **Flood vs. Drip:** $97,732 / 0.60 = 162,886\text{ L/day}$ vs. $97,732 / 0.90 = 108,591\text{ L/day} \rightarrow \mathbf{1,628,860\text{ L/month saved}}$ (**33.3% reduction**).
+- **Diesel Pumping:** $4.89\text{M L} / 35,000\text{ L/hr} = 139.6\text{ hrs} \times 1.2\text{ L/hr} = 167.54\text{ L} \times ₹95/\text{L} + ₹2,500 = \mathbf{₹18,416/\text{month}}$.
+- **Shared Solar Fee:** $100\text{ operating hours} \times ₹60/\text{hr} = \mathbf{₹6,000/\text{month}} \rightarrow \mathbf{₹12,416/\text{month net cash savings}}$.
 
 #### Verbatim 60-Second Speaker Script:
-> *"We do not present fabricated or exaggerated impact claims. Every number on this slide is derived directly from established FAO-56 Penman-Monteith agronomic equations embedded in our software engine.
->
-> On a standard 3.5-acre tomato plot in Nashik, a farmer using traditional flood irrigation consumes 4.88 million liters of water per month. FarmKind reduces this to 3.25 million liters—saving 1.63 million liters, or 33.3%, every single month. 
+> *"Judges, we do not present fabricated or exaggerated impact claims. Every number on this slide is derived directly from established FAO-56 Penman-Monteith agronomic equations implemented in our code.
 > 
-> Because pumping volume is reduced and diesel is replaced by shared community solar, 167.5 liters of diesel burn are eliminated. Financially, the farmer’s monthly pumping bill drops from ₹18,416 to a ₹6,000 shared solar fee, leaving ₹12,416 in hard cash in his pocket each month. That is ₹1.49 Lakh per year—an amount that transforms a family's financial resilience."*
+> On a standard 3.5-acre tomato plot in Nashik, traditional flood irrigation consumes 4.88 million liters of water per month. Precision drip scheduling reduces this to 3.25 million liters—saving 1.63 million liters, or 33.3%, every month.
+> 
+> By replacing diesel pumping with shared community solar, 167.5 liters of diesel are avoided. Financially, the farmer's monthly pumping expenditure drops from ₹18,416 to a ₹6,000 shared solar fee, leaving ₹12,416 in hard cash in his pocket each month. 
+> 
+> These are model-based scenarios using stated assumptions, and field-validating these metrics is the exact focus of our Phase 1 pilot."*
 
 ---
 
-### Slide 10: Business Model & Unit Economics
-**Headline:** A Scalable, B2B2C Shared Clean-Energy Ecosystem Benefiting Every Stakeholder
+### Slide 10: Business Model & Illustrative Unit Economics
+**Headline:** An Asset-Light, B2B2C Shared Clean-Energy Ecosystem
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
@@ -404,103 +440,135 @@
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-#### Illustrative Unit Economics (Per 100-Farmer Village Cluster):
+#### Illustrative Pilot Unit Economics (Per 100-Farmer Village Cluster):
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
 │ 1. CLUSTER PROFILE                                                              │
-│    • Total Farmers Served: 100 Smallholders (Average 3.0 Acres each)            │
-│    • Total Shared Assets: 5 Community Solar Pumps (5HP) + 1 Micro-Cold Room     │
+│    • Target Smallholders: 100 Farmers (Average 3.0 Acres each)                  │
+│    • Shared Assets: 5 Community 5HP Solar Pumps + 1 Micro-Cold Room             │
 ├─────────────────────────────────────────────────────────────────────────────────┤
-│ 2. REVENUE GENERATION (MONTHLY)                                                 │
-│    • Total Pumping Hours Billed: 5,000 Hours @ ₹60/Hour = ₹3,00,000             │
-│    • Cold Storage Booking Fees: 10,000 kg @ ₹0.075/kg/day = ₹22,500             │
-│    • Gross Cluster Transaction Value (GMV): ₹3,22,500 / month                   │
+│ 2. MONTHLY TRANSACTION VALUE (GMV) [PILOT TARGET]                               │
+│    • Solar Pumping Demand: 5,000 Total Hours @ ₹60/Hour          = ₹3,00,000    │
+│    • Cold Storage Throughput: 10,000 kg @ ₹0.075/kg/day          = ₹22,500      │
+│    • Gross Monthly Cluster GMV                                   = ₹3,22,500    │
 ├─────────────────────────────────────────────────────────────────────────────────┤
-│ 3. VALUE DISTRIBUTION                                                           │
-│    • Solar Asset Owners / FPO Payout (90%): ₹2,90,250 (Accelerates Solar Payback)│
-│    • FarmKind Platform Fee (10% Take-Rate): ₹32,250 / month                     │
-│    • Annual FarmKind ARR per 100-Farmer Cluster: ₹3,87,000                      │
+│ 3. VALUE DISTRIBUTION & REVENUE                                                 │
+│    • Solar Asset Owners & FPO Payout (90%)                       = ₹2,90,250    │
+│    • FarmKind Software Platform Fee (10% Take-Rate)              = ₹32,250/mo   │
+│    • Illustrative Annual ARR per 100-Farmer Village Cluster      = ₹3,87,000    │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │ 4. FARMER RETURN ON INVESTMENT                                                  │
-│    • Cumulative Cluster Diesel Savings: ₹18.4 Lakh - ₹6.0 Lakh = ₹12.4 Lakh/mo. │
-│    • Cluster Benefit-to-Cost Ratio: 4.1x Net Financial Return to Farming Community│
+│    • Baseline Diesel Cost: 100 × ₹18,416                         = ₹18,41,600   │
+│    • Shared Solar Fee: 100 × ₹6,000                              = ₹6,00,000    │
+│    • Net Monthly Community Cash Savings                          = ₹12,41,600   │
+│    • Community Benefit-to-Fee Ratio                              = 4.1x         │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 #### Verbatim 60-Second Speaker Script:
-> *"FarmKind’s business model does not rely on perpetual subsidies. We operate a high-margin, asset-light B2B2C model in partnership with Farmer Producer Organizations (FPOs). 
+> *"FarmKind's business model does not rely on perpetual charitable subsidies. We operate an asset-light, B2B2C model in partnership with Farmer Producer Organizations (FPOs).
 > 
-> Here are the unit economics of a typical 100-farmer village cluster with 5 shared solar pumps:
-> The cluster generates 5,000 hours of solar pumping demand monthly. At an accessible rental rate of ₹60 per hour, total gross billing is ₹3 Lakhs. 90%—or ₹2.7 Lakhs—goes straight to the local solar asset owners and FPO, allowing them to amortize clean-energy equipment in under 3 years. 
+> In a typical 100-farmer village hub with 5 community solar pumps, farmers generate roughly 5,000 hours of pumping demand each month. At an accessible rental rate of ₹60 per hour, total gross transaction volume is ₹3 Lakhs. 
 > 
-> FarmKind captures a 10% software facilitation take-rate, generating ₹32,250 per month, or nearly ₹4 Lakhs annually per cluster, with negligible marginal cost to serve. The farmers together save over ₹12 Lakhs in monthly diesel bills. Everyone wins."*
+> 90% goes directly to the local solar pump owners and FPO, enabling them to amortize their clean-energy capital in under 3 years. FarmKind captures a 10% software facilitation fee—generating ₹32,250 per month, or nearly ₹4 Lakhs annually per cluster, with negligible marginal cost to serve. 
+> 
+> The farmers collectively save over ₹12 Lakhs in monthly diesel bills. The asset owner earns reliable income. FarmKind operates a sustainable software business."*
 
 ---
 
-### Slide 11: Deployment & Scale-Up Plan
-**Headline:** Pragmatic, 4-Phase Rollout Grounded in FPO Networks and Proven Crop Clusters
+### Slide 11: Deployment Roadmap & Scale Plan
+**Headline:** Pragmatic, 4-Phase Rollout Grounded in FPO Networks and Proven Crop Belts
 
 ```
-┌─────────────────┬─────────────────┬─────────────────┬─────────────────┐
-│ PHASE 1: PILOT  │ PHASE 2: FPO    │ PHASE 3: EXPAND │ PHASE 4: SCALE  │
-│ (Months 1–6)    │ (Months 7–18)   │ (Months 19–30)  │ (Months 31–48)  │
-├─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-│ • Nashik Dist., │ • 15 FPO Hubs   │ • 50 FPOs across│ • 250,000       │
-│   Maharashtra   │ • 5,000 Farmers │   Maharashtra,  │   Farmers across│
-│ • 250 Farmers   │ • Integrate     │   Gujarat & MP  │   Semi-Arid     │
-│ • Tomato, Onion │   PM-KUSUM solar│ • 50,000 Farmers│   India         │
-│   & Chili crops │   pump owners   │ • Cold-chain logistics│ • Carbon Credit│
-│ • Validate FAO  │ • Indian Voice  │   integration   │   verification  │
-│   engine in field│   AI rollout   │ • Breakeven ARR │   monetization  │
-└─────────────────┴─────────────────┴─────────────────┴─────────────────┘
+┌───────────────────┬───────────────────┬───────────────────┬───────────────────┐
+│ PHASE 1: PILOT    │ PHASE 2: FPO HUBS │ PHASE 3: DISTRICT │ PHASE 4: SCALE    │
+│ (Months 1–6)      │ (Months 7–18)     │ (Months 19–30)    │ (Months 31–48)    │
+│ [CURRENT STAGE]   │ [PLANNED NEXT]    │ [SCALE TARGET]    │ [SCALE AMBITION]  │
+├───────────────────┼───────────────────┼───────────────────┼───────────────────┤
+│ • Nashik Dist., MH│ • 15 FPO Hubs     │ • 50 FPOs across  │ • 250,000 Farmers │
+│ • 250 Farmers     │ • 5,000 Farmers   │   MH, GJ & MP     │   across Western  │
+│ • Tomato, Onion   │ • PM-KUSUM solar  │ • 50,000 Farmers  │   & Central India │
+│   & Chili crops   │   pump onboarding │ • Cold logistics  │ • Carbon & Water  │
+│ • Validate FAO-56 │ • Vernacular Voice│   integration     │   credit auditing │
+│   math in field   │   AI rollout      │ • Break-even ARR  │   monetization    │
+└───────────────────┴───────────────────┴───────────────────┴───────────────────┘
 ```
 
-#### Pilot Geography, Target Crops & Farmer Profile:
+#### Transparent Deployment Parameters:
 - **Target Geography:** Nashik District, Maharashtra (Semi-arid zone with high solar insolation, active FPO networks, and intensive horticultural farming).
 - **Target Crops:** Tomato, Onion, and Green Chili (High water sensitivity, acute perishability, and high market price volatility).
-- **Target Farmer Profile:** Smallholders with 1.5 to 4.0 acres, dependent on rental diesel pump sets, possessing entry-level 4G Android smartphones.
-- **Go-To-Market Delivery Partners:** Local FPOs (e.g., Sahyadri Farms cluster), primary agricultural credit societies (PACS), and PM-KUSUM clean-energy vendors.
+- **Target Farmer Profile:** Smallholders cultivating 1.5 to 4.0 acres who currently rent diesel pump sets.
+- **Go-To-Market Delivery Partners:** Local FPOs (e.g., Sahyadri Farms cluster), primary agricultural credit societies (PACS), and PM-KUSUM solar vendors.
 
 #### Verbatim 60-Second Speaker Script:
-> *"Our deployment strategy is designed around existing rural distribution channels. We do not acquire farmers one-by-one through expensive digital marketing. We partner directly with Farmer Producer Organizations (FPOs) who already manage input procurement and produce aggregation.
->
-> In Phase 1, we will deploy in Nashik across 250 tomato and onion farmers, validating soil matric curves and pump scheduling with local Krishi Vigyan Kendras (KVKs). 
-> In Phase 2, we expand to 15 FPOs and 5,000 farmers, integrating PM-KUSUM community solar installations. 
-> By Phase 3 and 4, we scale across the semi-arid horticultural belts of Maharashtra, Gujarat, and Madhya Pradesh, reaching 250,000 smallholders and generating sustainable software revenue while conserving billions of liters of groundwater."*
+> *"Our deployment strategy is designed around established rural distribution channels. We do not attempt to acquire farmers one by one through expensive digital marketing. We partner directly with Farmer Producer Organizations (FPOs) who already aggregate produce and manage input supply.
+> 
+> In Phase 1, we will deploy in Nashik across 250 tomato and onion farmers, validating soil moisture curves and pump scheduling with local agricultural extension centers.
+> In Phase 2, we expand to 15 FPOs and 5,000 farmers, integrating existing PM-KUSUM community solar installations.
+> In Phase 3 and 4, we scale across the semi-arid horticultural belts of Maharashtra, Gujarat, and Madhya Pradesh, bringing 250,000 smallholders onto shared clean energy."*
 
 ---
 
-### Slide 12: Team Introduction & Execution Vision
-**Headline:** Multidisciplinary Team Combining Software Engineering, Agronomy, and Rural Operations
+### Slide 12: Team & Execution Vision
+**Headline:** Built with Technical Rigor and Committed to Ground Realities
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
 │                           THE FARMKIND FOUNDING TEAM                            │
-├───────────────────────────┬───────────────────────────┬───────────────────────────┤
-│ FULL-STACK SYSTEMS & AI   │ PRECISION AGRO-HYDROLOGY  │ RURAL PRODUCT & FPO OPS   │
-│ Abhishek Pandey           │ Agronomy Domain Lead      │ Rural Partnerships Lead   │
-│ • Full-stack software     │ • Specialized in FAO-56   │ • 6+ years experience in  │
-│   architect (React 19,    │   evapotranspiration, soil│   FPO operations, mandi   │
-│   Node, offline sync).    │   matric potential, and   │   procurement, and rural  │
-│ • Architect of Gemini 2.0 │   micro-irrigation.       │   last-mile adoption.     │
-│   Flash voice integration.│ • Field experience in     │ • Direct relationships    │
-│ • Built 136-test suite.   │   Maharashtra tomato belt.│   with PM-KUSUM providers.│
-└───────────────────────────┴───────────────────────────┴───────────────────────────┘
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│   ABHISHEK PANDEY                                                               │
+│   Founder, Systems Architect & Full-Stack AI Engineer                           │
+│   • Architect of FarmKind Platform, React 19/TS Client & Node.js Engine         │
+│   • Engineered the True Offline Queue with Idempotent Synchronization           │
+│   • Built the Google Gemini 2.0 Flash Vernacular Voice Integration              │
+│   • Authored the 12 Automated Test Suites (136 Passing Tests)                   │
+│                                                                                 │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│   PLANNED PILOT ADVISORS & CAPABILITIES [TARGETED FOR PHASE 1 DEPLOYMENT]       │
+│   • Precision Agro-Hydrology Advisory: FAO-56 Evapotranspiration Validation     │
+│   • Rural FPO Operations Advisory: Maharashtra Farmer Collective Mobilization   │
+└─────────────────────────────────────────────────────────────────────────────────┘
+```
+
+#### The Transformation in One Memorable View:
+```
+┌────────────────────────────┐              ┌────────────────────────────┐
+│      BEFORE FARMKIND       │              │       WITH FARMKIND        │
+├────────────────────────────┤              ├────────────────────────────┤
+│ • Expensive Diesel Rental  │              │ • Affordable Shared Solar  │
+│ • Guesswork Irrigation     │   ───────►   │ • RainGuard Intelligence   │
+│ • Uncooled Produce Spoilage│              │ • Pre-Booked Cold Storage  │
+│ • Unaffordable CapEx Debt  │              │ • Pay-As-You-Go Fractional │
+│ • App Crashes Offline      │              │ • True Offline Resilience  │
+└────────────────────────────┘              └────────────────────────────┘
 ```
 
 #### Concluding Commitment & Vision:
-> *"Small farms do not have to be fragile farms. By giving smallholders the power of shared clean energy and closed-loop agro-intelligence, FarmKind proves that Indian agriculture can do more with less: less water, less energy, less money, and less waste. 
+> *"Small farms do not have to be fragile farms.  
+> FarmKind helps every small farm do more with less."*
+
+#### Verbatim 60-Second Speaker Script:
+> *"Behind FarmKind is a clear commitment to technical rigor and honest engineering. 
 > 
-> We have built the working software prototype, mathematically validated the economics, and mapped a clear path to scale. We are ready to turn agricultural vulnerability into climate-resilient prosperity. Thank you."*
+> As the founder and systems architect, I have designed and built every layer of this platform—from the deterministic FAO-56 calculations and the Gemini 2.0 Flash voice service to our resilient offline synchronization engine and 136 automated tests. For our Phase 1 field pilot, we are partnering with regional agronomy researchers and FPO coordinators to validate our curves in real Maharashtra soil.
+> 
+> Look at the transformation on this slide:
+> From diesel extortion to shared clean power. From guesswork watering to intelligent scheduling. From uncooled spoilage to pre-booked cold chains. From unaffordable debt to fractional access.
+> 
+> **Small farms do not have to be fragile farms.**
+> **FarmKind helps every small farm do more with less.**
+> 
+> Thank you, and we welcome your questions."*
 
 ---
 
-# 📖 PART II: DETAILED SOLUTION WRITE-UP & TECHNICAL DOSSIER
+# 📖 PART II: DETAILED SOLUTION DOSSIER & TECHNICAL APPENDIX
 
 ## 10. Detailed Solution Write-Up
 
 ### 10.1 How FarmKind Works
-FarmKind operates as a closed-loop cyber-physical orchestration system for smallholder agriculture. It bridges three layers:
+FarmKind operates as a closed-loop cyber-physical orchestration platform for smallholder agriculture. It functions across three layers:
 1. **The Ingestion & Context Layer:** Reads soil probe moisture sensors, ambient temperature, relative humidity, and live agrometeorological precipitation forecasts via IMD / Open-Meteo REST APIs.
 2. **The Deterministic Intelligence Core:** Evaluates raw inputs against established agronomic equations (FAO-56 Penman-Monteith for crop water requirements; Q10 biological respiration for post-harvest perishable degradation). The engine operates deterministically—guaranteeing explainable, transparent decisions rather than unpredictable black-box outputs.
 3. **The Shared-Action & Clean-Energy Layer:** When irrigation or cooling is needed, FarmKind connects the farmer to nearby community solar assets (PM-KUSUM 5HP solar pumps, FPO micro-cold rooms) via fractional, pay-as-you-go reservations.
@@ -574,14 +642,14 @@ FarmKind operates as a closed-loop cyber-physical orchestration system for small
 
 ---
 
-## 12. Supporting Design Artifacts: 10 Core Project UI Screens
+## 12. Supporting Design Artifacts: 6 Core Project UI Screens
 
 Every screen in FarmKind is architected around the core paradigm:  
 **INPUT ➔ INTELLIGENCE ➔ ACTION ➔ OUTCOME**
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                             FARMKIND 10-SCREEN ARTIFACT COMPENDIUM                               │
+│                             FARMKIND CORE SCREEN ARTIFACT COMPENDIUM                             │
 ├────┬───────────────────────┬─────────────────┬──────────────────┬─────────────────┬──────────────┤
 │ #  │ Screen Name & File    │ Input Data      │ Intelligence     │ Action Trigger  │ Outcome      │
 ├────┼───────────────────────┼─────────────────┼──────────────────┼─────────────────┼──────────────┤
@@ -601,29 +669,13 @@ Every screen in FarmKind is architected around the core paradigm:
 │    │ Screen4ConnectedFarm  │ Sensor nodes    │ health & signal  │ of valves &     │ telemetry or │
 │    │                       │ Pump telemetry  │ verification     │ sensor probes   │ valve faults │
 ├────┼───────────────────────┼─────────────────┼──────────────────┼─────────────────┼──────────────┤
-│ 5  │ How It Works Guide    │ User onboarding │ Interactive 4-   │ Walkthrough of  │ Eliminates   │
-│    │ ScreenHowItWorks.tsx  │ step preferences│ stage flow guide │ M-U-D-A logic   │ digital divide│
-│    │                       │                 │ (M-U-D-A)        │ for smallholder │ friction     │
-├────┼───────────────────────┼─────────────────┼──────────────────┼─────────────────┼──────────────┤
-│ 6  │ Harvest Shield        │ Harvest weight  │ Q10 biological   │ Routes produce  │ Prevents rot;│
-│    │ Screen6Shields.tsx    │ Ambient temp    │ decay modeling;  │ to solar cold   │ avoids mandi │
-│    │                       │ Mandi prices    │ spoilage hours   │ room vs. mandi  │ panic dumping│
-├────┼───────────────────────┼─────────────────┼──────────────────┼─────────────────┼──────────────┤
-│ 7  │ Impact & Pride Hub    │ Cumulative farm │ Annualized water,│ Download farmer │ Verifiable   │
-│    │ Screen7Impact.tsx     │ telemetry data  │ diesel & rupee   │ pride & credit  │ ESG & credit │
-│    │                       │                 │ savings audit    │ certificate     │ readiness    │
-├────┼───────────────────────┼─────────────────┼──────────────────┼─────────────────┼──────────────┤
-│ 8  │ Mitra Vernacular Voice│ Spoken Hindi /  │ Gemini 2.0 Flash │ Answers queries │ 100% access  │
+│ 5  │ Mitra Vernacular Voice│ Spoken Hindi /  │ Gemini 2.0 Flash │ Answers queries │ 100% access  │
 │    │ MitraVoiceModal.tsx   │ Marathi audio   │ Voice AI + local │ & triggers farm │ for illiterate│
 │    │                       │                 │ TTS fallback     │ actions         │ farmers      │
 ├────┼───────────────────────┼─────────────────┼──────────────────┼─────────────────┼──────────────┤
-│ 9  │ True Offline Sync     │ Disconnected    │ Idempotent FIFO  │ Background sync │ Zero data    │
-│    │ offlineSyncEngine.ts  │ mutations       │ queue management │ upon connection │ loss; zero   │
-│    │                       │ (pump bookings) │ (`localStorage`) │ restoration     │ duplicates   │
-├────┼───────────────────────┼─────────────────┼──────────────────┼─────────────────┼──────────────┤
-│ 10 │ Before vs. After View │ Pre vs. post    │ Side-by-side     │ Dynamic toggling│ Validates    │
-│    │ Screen1Baseline.tsx   │ FarmKind state  │ delta calculation│ of farm economic│ 4.1x return  │
-│    │                       │                 │ engine           │ transformation  │ on investment│
+│ 6  │ Impact & Pride Hub    │ Cumulative farm │ Annualized water,│ Download farmer │ Verifiable   │
+│    │ Screen7Impact.tsx     │ telemetry data  │ diesel & rupee   │ pride & credit  │ ESG & credit │
+│    │                       │                 │ savings audit    │ certificate     │ readiness    │
 └────┴───────────────────────┴─────────────────┴──────────────────┴─────────────────┴──────────────┘
 ```
 
@@ -752,21 +804,47 @@ $$\text{Net Farmer Rupee Savings} = ₹18,416 - ₹6,000 = \mathbf{₹12,416/\te
 
 ## 16. Team Introduction & Strategic Strengths
 
-| Team Member | Role & Expertise | Key Technical & Execution Contributions |
-| :--- | :--- | :--- |
-| **Abhishek Pandey** | **Full-Stack Systems & AI Lead** | Architect of the React 19/TypeScript client, Node.js REST backend, true offline synchronization engine with idempotency, and Google Gemini 2.0 Flash bilingual voice proxy. |
-| **Agro-Hydrology Lead** | **Agronomy & Soil Physics** | Modeled the FAO-56 Penman-Monteith crop water algorithms, soil moisture matric potentials, and the biological Q10 perishable decay curves. |
-| **Rural Operations Lead** | **FPO Partnerships & Field Deployment** | 6+ years working with Maharashtra FPOs, agricultural cooperatives, PM-KUSUM subsidy schemes, and farmer village adoption programs. |
+| Team Member / Role | Focus Area | Technical & Operational Scope | Status |
+| :--- | :--- | :--- | :--- |
+| **Abhishek Pandey** | **Founder, Systems Architect & Full-Stack AI Engineer** | Architected the React 19/TypeScript client, Node.js REST backend, true offline synchronization engine with idempotency, and Google Gemini 2.0 Flash bilingual voice proxy. | **Active / Founder** |
+| **Precision Agro-Hydrology Advisory** | **Agronomy & Soil Physics** | Advising on FAO-56 Penman-Monteith crop water models, soil moisture matric potentials, and biological Q10 perishable decay curves. | **Planned Pilot Advisory** |
+| **Rural FPO Operations Advisory** | **FPO Partnerships & Field Deployment** | Advising on Maharashtra FPO networks, agricultural cooperatives, PM-KUSUM subsidy integration, and farmer village adoption programs. | **Planned Pilot Advisory** |
 
 ---
 
-# 🎯 FINAL SUMMARY FOR EVALUATORS
+## 🏆 FINAL JUDGE AUDIT CHECKLIST
 
-FarmKind answers the national challenge by uniting **Software Intelligence**, **Community Clean Energy**, and **Shared Access Economics**.
+Before submission, the complete deck was audited against the competition evaluation standard:
 
-1. **It is Urgent:** Solves the 90% water crisis, diesel extortion, and 20% post-harvest spoilage.
-2. **It is Farmer-Centric:** Zero CapEx; vernacular voice in Hindi and Marathi; resilient offline operation.
-3. **It is Technically Credible:** Built, verified with 136 automated tests, and grounded in rigorous FAO-56 math.
-4. **It is Economically Viable:** Saves each farmer **₹12,416 every month**, providing an immediate 4.1x financial return while generating sustainable SaaS ARR.
-
-**FarmKind: Helping Every Small Farm Do More With Less.**
+- [x] **Is the farmer problem immediately understandable?**  
+  *Yes. Anchored in Ramesh's 3.5-acre tomato farm in Nashik with direct quotes on water, diesel, waste, and connectivity.*
+- [x] **Is FarmKind's differentiation obvious?**  
+  *Yes. It is an intelligent software + shared-access layer, not an e-commerce app, gadget dashboard, or chatbot.*
+- [x] **Is savings-first psychology obvious?**  
+  *Yes. Slide 6 and Slide 9 show the ₹12,416 monthly cash savings before promoting environmental sustainability.*
+- [x] **Is shared/rental access obvious?**  
+  *Yes. Fractional rental of 5HP community solar pumps at ₹60/hour replaces unaffordable ₹3 Lakh CapEx.*
+- [x] **Is solar-only positioning clear?**  
+  *Yes. Solar PV micro-grids provide the sole renewable power layer for pumping, cooling, and post-harvest drying.*
+- [x] **Is intelligence connected to action?**  
+  *Yes. The M-U-D-A loop evaluates sensor telemetry and directly triggers RainGuard holds or solar pump bookings.*
+- [x] **Are DATA / ENERGY / MONEY flows clear?**  
+  *Yes. Slide 5 features an architecture diagram showing all three independent flows.*
+- [x] **Is the prototype visibly real?**  
+  *Yes. Verified with 12 automated test suites and 136 tests passing in Vitest with zero errors.*
+- [x] **Are modeled results clearly labeled?**  
+  *Yes. Water (-33.3%), diesel (-100%), cash (+₹12,416), and spoilage (-75%) are explicitly labeled as model-based pilot scenarios.*
+- [x] **Are future targets clearly labeled?**  
+  *Yes. Phase 1 (Pilot) is distinguished from Phase 2 (FPOs), Phase 3 (Districts), and Phase 4 (250,000 farmers).*
+- [x] **Are technical claims verified against the code?**  
+  *Yes. React 19, TypeScript, Node.js, Express, `localStorage` offline queue, `X-Idempotency-Key`, and Gemini 2.0 Flash.*
+- [x] **Are all competition requirements covered?**  
+  *Yes. All 26 requirements from the competition brief are addressed.*
+- [x] **Is the business model understandable?**  
+  *Yes. 10% platform take-rate on shared solar hours, 90% payout to local asset owners/FPOs.*
+- [x] **Is the roadmap believable?**  
+  *Yes. Begins with a 250-farmer pilot in Nashik, Maharashtra before scaling to broader FPO clusters.*
+- [x] **Is the team truthful?**  
+  *Yes. Abhishek Pandey is credited for what he built; advisory roles are honestly labeled as planned pilot capabilities.*
+- [x] **Can a judge explain FarmKind in one sentence after the presentation?**  
+  *“FarmKind doesn't ask small farmers to buy more technology; it helps them make better decisions and access shared clean energy—so every small farm can do more with less.”*
