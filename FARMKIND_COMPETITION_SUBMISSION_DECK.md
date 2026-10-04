@@ -27,7 +27,7 @@
 | **9. Team Introduction** | ✅ YES | **Slide 12 & Section 16:** 100% Truthful founder credentials (Abhishek Pandey) + planned domain advisory capabilities. |
 | **10. Detailed Solution Write-Up** | ✅ YES | **Part II, Section 10:** How FarmKind works, operational assumptions, and why suited to Indian smallholders. |
 | **11. System Architecture Diagram** | ✅ YES | **Slide 5 & Part II, Section 11:** Architectural layout detailing **DATA FLOW**, **ENERGY FLOW**, and **MONEY FLOW**. |
-| **12. Supporting Design Artifacts** | ✅ YES | **Slide 7 & Part II, Section 12:** 6 Core UI Screens annotated with *Input → Intelligence → Action → Outcome*. |
+| **12. Supporting Design Artifacts** | ✅ YES | **Slide 7 & Part II, Section 12:** All 7 Working Journey Screens + Screen 0 Architecture Guide + Live Inspector & Provenance System annotated with *Input → Intelligence → Action → Outcome*. |
 | **13. Software Prototype / Simulation** | ✅ YES | **Slide 7 & Part II, Section 13:** Real working prototype proof: 12 test suites, 136 tests passing, zero physical hardware claims. |
 | **14. Quantified Benefit (Baseline vs FarmKind)** | ✅ YES | **Slide 9 & Part II, Section 14:** Rigorous FAO-56 metrics: water (-33.3%), diesel (-100%), cash (+₹12,416/mo), spoilage (-75%). |
 | **15. Deployment, Scale-Up & Unit Economics** | ✅ YES | **Slide 10, Slide 11 & Part II, Section 15:** Target crop (Tomato), Geography (Nashik), FPO model, transparent unit economics. |
@@ -166,20 +166,28 @@
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-#### The Four Core Protectors:
-1. **Smart Need-Aware Irrigation Engine (`Screen 2`):** Continuously evaluates root-zone moisture matric potential against FAO-56 mid-season curves. Automated RainGuard triggers when rain probability $\ge 75\%$, halting pumping to eliminate groundwater waste, root hypoxia, and save ₹450 per session.
-2. **Shared Clean-Energy Access (`Screen 3`):** Unlocks nearby community solar pumps at ₹60/hour pay-as-you-go, displacing expensive diesel rentals and saving ₹12,416/month.
-3. **Autonomous Post-Harvest Spoilage Shield (`Screen 6`):** In-transit biological decay modeling (Q10 index) predicting spoilage hours under highway tarmac heat; enables 1-tap diversion to nearby FPO Solar Cold Rooms to prevent 500 kg in rot.
-4. **Mitra Voice Guidance (`MitraVoiceModal`):** 24/7 bilingual voice interaction in Hindi and Marathi, backed by an offline sync queue for zero-connectivity fields.
+#### The Six Unified Protectors & Intelligence Engines:
+1. **Smart Need-Aware Precision Irrigation & RainGuard Safeguard (`Screen 2`):** Continuously monitors root-zone capacitive telemetry (15 cm probe, 34% VWC) against FAO-56 Penman-Monteith mid-season crop curves. Automated **RainGuard** triggers when rain probability $\ge 75\%$ (e.g., 78% satellite forecast), halting pumping to eliminate groundwater waste, prevent root hypoxia, and save ₹450 / 12,000 L per session. When dry (19%), provides 1-tap solar pump actuation with **automatic motor shut-off at 35% target moisture**, with transparent "See Why" decision traces.
+2. **Shared Clean-Energy Access & Village Demand Aggregation (`Screen 3`):** Unlocks nearby community solar pumps at ₹60/hour pay-as-you-go (vs ₹132/hr diesel), saving ₹12,416/month. Formalizes 3-farmer village clusters pooling pumping hours to attract clean-energy providers, backed by automated eligibility matching for 60% PM-KUSUM, 55% PMKSY-PDMC drip, SMAM mechanization, and AIF solar cold room subsidies.
+3. **Mandi Connect, Dynamic Price Arbitrage & Direct FPO Contracts (`Screen 4`):** Real-time APMC mandi price discovery across Nashik, Pimpalgaon, and Vashi with freight-deducted net realization; direct farmgate purchase contracts with institutional buyers (Sahyadri Farms, BigBasket, Reliance Fresh) bypassing 8%–10% middleman commission; and smart cold storage price arbitrage (+₹7,620 profit).
+4. **Autonomous Post-Harvest Spoilage Shield (`Screen 6` — Harvest Protector):** In-transit biological decay modeling (Q10 respiration index) predicting spoilage hours under highway tarmac heat across 4 crop scenarios:
+   - 🍅 *Tomatoes (1,000 kg):* Highway heatwave alert $\rightarrow$ 1-tap diversion to nearby FPO Solar Cold Room, protecting 100% of produce from rot.
+   - 🫑 *Capsicum (800 kg):* Mandi price surge arbitrage $\rightarrow$ reroutes to highest net realization market.
+   - 🍌 *Bananas (1,000 kg):* Ethylene ripening surge $\rightarrow$ fast-tracks to express processing hub.
+   - 🧅 *Onions (1,500 kg):* High humidity mold threat $\rightarrow$ reroutes to solar-aerated curing storage.
+5. **Climate Defender & Cross-Shield Intelligence (`Screen 6` — Climate Defender):**
+   - *Climate Defender:* Translates extreme heatwave spikes (36°C $\rightarrow$ 39°C $\rightarrow$ 41°C) with 8% rain probability into proactive micro-sprinkler cooling and soil mulch defenses.
+   - *Cross-Shield Intelligence (`FarmPriorityEngine`):* Unifies the farm's brain so a single climate shock cascades across Climate Defender $\rightarrow$ Soil Moisture (Resource Saver) $\rightarrow$ In-Transit Produce (Harvest Protector), directly answering: *"आज मेरे खेत में सबसे जरूरी क्या है?"*.
+6. **Mitra Conversational Voice AI & True Offline Queue (`Screen 5` / `MitraVoiceModal`):** 24/7 bilingual voice interaction in Hindi, Marathi, and English powered by Google Gemini 2.0 Flash REST proxy with local regex fallback, and a client-side FIFO mutation queue in `localStorage` with `X-Idempotency-Key` headers ensuring zero lost records during field connectivity drops.
 
 #### Verbatim 60-Second Speaker Script:
 > *"Here is the breakthrough: FarmKind closes the loop between data, clean energy, and action.
 > 
 > When soil probes or field inputs record that moisture is dropping, our intelligence doesn't stop at drawing a chart. It combines soil status with crop growth stage and hyper-local precipitation forecasts. 
 > 
-> If rain is coming within 8 hours, it actively holds irrigation, saving water and money. When water is truly needed, it doesn't ask the farmer to start a diesel engine—it allows him to book a shared community solar pump with a single voice command. 
+> If rain is coming within 8 hours, RainGuard actively holds irrigation, saving water and ₹450 per session. When water is truly needed, FarmKind actuates a shared community solar pump and shuts off automatically at the 35% agronomic target.
 > 
-> And when harvest arrives, it tracks biological decay rates to route produce into shared cold storage before rot sets in.
+> When harvest arrives, our Post-Harvest Shield models biological Q10 respiration decay to route produce into shared cold rooms before highway tarmac heat causes rot. And our Climate Defender translates 41°C heatwaves into immediate crop cooling, uniting irrigation, climate, and harvest under one single brain.
 > 
 > Data leads to Intelligence. Intelligence leads to Clean Action. Clean Action delivers Measurable Value."*
 
@@ -317,51 +325,63 @@
 **Headline:** A Functional, Tested Software Prototype Validating the Complete Farmer Experience
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│              ACTUAL WORKING PROTOTYPE UI SCREENS (REACT 19 + NODE)              │
-├───────────────────────────┬───────────────────────────┬─────────────────────────┤
-│ 1. SMART NEED-AWARE PUMP  │ 2. POST-HARVEST SHIELD    │ 3. SOLAR RESOURCE HUB   │
-│ Screen2CommandCenter.tsx  │ Screen6Shields.tsx        │ Screen3Resources.tsx    │
-│ Root-zone moisture gauge  │ Q10 biological decay rate,│ Pay-per-use community   │
-│ (34%) + RainGuard holds   │ in-transit heatwave alert,│ solar pump & cold room  │
-│ pumping before 78% rain.  │ 1-tap solar cold divert.  │ reservation cards.      │
-├───────────────────────────┼───────────────────────────┼─────────────────────────┤
-│ 4. BASELINE COST BLEED    │ 5. MITRA VOICE & OFFLINE  │ 6. IMPACT & PRIDE       │
-│ Screen1Baseline.tsx       │ MitraVoiceModal.tsx       │ Screen7Impact.tsx       │
-│ Shows 3.5-acre plot,      │ Spoken Hindi/Marathi Voice│ Verified 1.63M L water  │
-│ 4.89M L flood water use,  │ + persistent offline queue│ saved, 167.5 L diesel   │
-│ and ₹18,416 diesel cost.  │ with idempotent auto-sync.│ avoided, certificate.   │
-└───────────────────────────┴───────────────────────────┴─────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                        ACTUAL WORKING PROTOTYPE UI SCREENS (REACT 19 + TYPESCRIPT)                     │
+├───────────────────────────────┬───────────────────────────────┬────────────────────────────────────────┤
+│ 1. BASELINE PROBLEM AUDIT     │ 2. SMART IRRIGATION COMMAND   │ 3. SHARED SOLAR & DEMAND AGGREGATION   │
+│ Screen1Baseline.tsx           │ Screen2CommandCenter.tsx      │ Screen3Resources.tsx                   │
+│ Shows 3.5-acre plot, 4.89M L  │ Capacitive probe (34%) +      │ Pay-per-use solar pump (₹60/hr) vs.    │
+│ flood water bleed, and ₹18,416│ RainGuard hold (78% rain) +   │ ₹132/hr diesel; 3-farmer demand pool;  │
+│ monthly diesel extortion.     │ auto-shutoff at 35% target.   │ 60% PM-KUSUM & 55% PMKSY subsidies.    │
+├───────────────────────────────┼───────────────────────────────┼────────────────────────────────────────┤
+│ 4. MANDI ARBITRAGE & FPO      │ 5. MITRA VERNACULAR VOICE     │ 6. POST-HARVEST & CLIMATE DEFENDER     │
+│ Screen4ConnectedFarm.tsx      │ Screen5Voice.tsx / MitraModal │ Screen6Shields.tsx                     │
+│ Real-time APMC price spread   │ Spoken Hindi/Marathi Voice    │ Q10 biological decay across 4 crops;   │
+│ (freight-deducted) + direct   │ (Gemini 2.0 Flash REST) +     │ 1-tap highway cold divert; 41°C heat   │
+│ FPO contracts saving 8-10%.   │ persistent offline sync queue.│ shield + Cross-Shield priority engine. │
+├───────────────────────────────┼───────────────────────────────┼────────────────────────────────────────┤
+│ 7. UNIFIED IMPACT & PRIDE     │ 0. HOW IT WORKS & ARCHITECTURE│ SYSTEM: LIVE PROVENANCE INSPECTOR      │
+│ Screen7Impact.tsx             │ ScreenHowItWorks.tsx          │ LiveInspectorModal.tsx & DemoControls  │
+│ Verified 1.63M L water saved, │ Interactive 3-flow guide      │ Full mathematical audit trail showing  │
+│ 167.5 L diesel cut; download  │ (Data, Energy, Money) +       │ equations, live inputs, and simulated  │
+│ Kisan Gaurav Green Certificate│ QuickStart walkthrough.       │ failure state testing (pump, sensors). │
+└───────────────────────────────┴───────────────────────────────┴────────────────────────────────────────┘
 ```
 
 #### Visual UI Prototype Artifacts:
-*(Place PNG screenshots into `public/screenshots/` to display directly)*
+*(Place PNG screenshots into `public/screenshots/` to display directly in submission viewers)*
 
-| 1. Smart Need-Aware Irrigation (`Screen 2`) | 2. Post-Harvest Spoilage Shield (`Screen 6`) | 3. Clean Energy Solar Hub (`Screen 3`) |
-| :---: | :---: | :---: |
-| ![1. Smart Irrigation](public/screenshots/01_smart_irrigation_rainguard.png) | ![2. Post-Harvest Shield](public/screenshots/02_post_harvest_spoilage_shield.png) | ![3. Solar Hub](public/screenshots/03_solar_resource_hub.png) |
+| 1. Baseline Problem Audit (`Screen 1`) | 2. Smart Irrigation Command (`Screen 2`) | 3. Shared Solar Hub (`Screen 3`) | 4. Mandi Connect Arbitrage (`Screen 4`) |
+| :---: | :---: | :---: | :---: |
+| ![1. Baseline](public/screenshots/01_baseline_farm.png) | ![2. Smart Irrigation](public/screenshots/02_smart_irrigation_rainguard.png) | ![3. Solar Hub](public/screenshots/03_solar_resource_hub.png) | ![4. Mandi Connect](public/screenshots/04_mandi_connect_arbitrage.png) |
 
-| 4. Baseline Farm State (`Screen 1`) | 5. Mitra Voice AI & Offline Sync | 6. Impact & Pride Certificate (`Screen 7`) |
-| :---: | :---: | :---: |
-| ![4. Baseline Farm](public/screenshots/04_baseline_farm.png) | ![5. Mitra Voice](public/screenshots/05_mitra_voice_offline_sync.png) | ![6. Impact Certificate](public/screenshots/06_impact_pride_certificate.png) |
+| 5. Mitra Vernacular Voice (`Screen 5`) | 6. Harvest & Climate Shield (`Screen 6`) | 7. Impact & Pride Hub (`Screen 7`) | 0. How FarmKind Works (`Screen 0`) |
+| :---: | :---: | :---: | :---: |
+| ![5. Mitra Voice](public/screenshots/05_mitra_voice_offline_sync.png) | ![6. Harvest Shield](public/screenshots/06_post_harvest_spoilage_shield.png) | ![7. Impact Certificate](public/screenshots/07_impact_pride_certificate.png) | ![0. How FarmKind Works](public/screenshots/08_how_it_works_architecture.png) |
 
 #### Transparent Software Implementation Status:
-- **[VERIFIED IMPLEMENTATION]:** Functional software prototype built with React 19, TypeScript, and native Node.js HTTP server.
+- **[VERIFIED IMPLEMENTATION]:** Functional software prototype built with React 19, TypeScript, and native Node.js HTTP server (`http.createServer`).
 - **[VERIFIED IMPLEMENTATION]:** 12 automated test suites comprising **136 tests passing** with zero errors (`npm test -- --run`).
-- **[VERIFIED IMPLEMENTATION]:** Post-Harvest Engine (`Screen6Shields.tsx`): Real-time highway interception, Q10 respiration decay modeling, and cold storage diversion.
-- **[VERIFIED IMPLEMENTATION]:** Smart Irrigation Engine (`Screen2CommandCenter.tsx`): Need-aware moisture threshold evaluations, automated RainGuard hold, and FAO-56 mid-season Kc calculations.
-- **[VERIFIED IMPLEMENTATION]:** Dual voice engine combining Google Gemini Flash REST proxy with Indian Web Speech TTS and local regex intent fallback.
-- **[VERIFIED IMPLEMENTATION]:** True Offline Queue in `localStorage` with `X-Idempotency-Key` headers preventing duplicate bookings on reconnect.
-- **CREDIBILITY COMMITMENT:** Zero physical hardware manufactured or claimed; all calculations run on verified software models.
+- **[VERIFIED IMPLEMENTATION]:** **Post-Harvest Spoilage Shield (`Screen6Shields.tsx`):** Real-time highway interception, biological Q10 respiration modeling across 4 distinct crop scenarios (Tomato highway heatwave, Capsicum price surge, Banana ethylene ripening, Onion humidity curing), Climate Defender heatwave escalation (36°C $\rightarrow$ 39°C $\rightarrow$ 41°C), and Cross-Shield priority intelligence (`FarmPriorityEngine`).
+- **[VERIFIED IMPLEMENTATION]:** **Smart Precision Irrigation (`Screen2CommandCenter.tsx`):** 15 cm root-zone probe telemetry, automated RainGuard hold ($\ge 75\%$ rain probability), 1-tap solar pump actuation with auto-shutoff at 35% target, and transparent "See Why" traces.
+- **[VERIFIED IMPLEMENTATION]:** **Shared Clean-Energy Marketplace (`Screen3Resources.tsx`):** Pay-per-use solar pumps at ₹60/hr, 3-farmer village demand pooling cluster, and automated subsidy scoring for PM-KUSUM (60%), PMKSY-PDMC (55%), SMAM (50%), and AIF (3%).
+- **[VERIFIED IMPLEMENTATION]:** **Mandi Connect & FPO Contracts (`Screen4ConnectedFarm.tsx`):** APMC price discovery across Nashik, Pimpalgaon, and Vashi with freight-deducted net realization; direct farmgate contracts with institutional buyers (Sahyadri, BigBasket, Reliance Fresh); and cold storage price arbitrage (+₹7,620).
+- **[VERIFIED IMPLEMENTATION]:** **Mitra Voice AI & Offline Engine (`Screen5Voice.tsx` / `MitraVoiceModal.tsx`):** Google Gemini 2.0 Flash REST proxy + Indian Web Speech TTS (`hi-IN`, `mr-IN`, `en-IN`) + local regex intent fallback, backed by a persistent FIFO mutation queue in `localStorage` with `X-Idempotency-Key` headers for field connectivity drops.
+- **[VERIFIED IMPLEMENTATION]:** **Unified Impact & Kisan Gaurav (`Screen7Impact.tsx`):** Verified cumulative savings counters (1.63M L water saved, 167.5 L diesel displaced, ₹12,416/mo cash saved) and downloadable multilingual Green Certificate.
+- **[VERIFIED IMPLEMENTATION]:** **Live Inspector & Failure Testing (`LiveInspectorModal.tsx` & `DemoControls`):** 100% transparent equation audit trail, simulation clock controls (1x, 10x, 60x), and failure state injection (pump offline, sensor stale, weather stale, market stale, transport unavailable).
+- **CREDIBILITY COMMITMENT:** Zero physical hardware manufactured or claimed; all calculations run on verified, transparent software models.
 
 #### Verbatim 60-Second Speaker Script:
-> *"Judges, what you see here are not conceptual mockups. These are live screenshots from our fully functioning software prototype running on React 19, TypeScript, and Node.js.
+> *"Judges, what you see here are not conceptual mockups. These are live screenshots from our fully functioning software prototype running on React 19, TypeScript, and native Node.js.
 > 
-> In Screen 1, our **Smart Need-Aware Irrigation Engine** monitors root-zone moisture matric curves. When satellite rain probability hits 78%, RainGuard automatically holds irrigation, saving 12,000 liters of water and ₹450 in pump rental.
-> In Screen 2, our **Post-Harvest Spoilage Shield** actively models biological Q10 respiration decay during highway transit. When a tomato truck encounters midday heat, FarmKind alerts the farmer and allows 1-tap diversion to a nearby FPO solar cold room, protecting 100% of the produce from rot.
-> In Screen 3, our Clean Energy Hub executes solar pump slot reservations. In Screen 5, Mitra Voice AI communicates in Hindi and Marathi, backed by an offline queue that stores actions safely when internet drops.
+> In Screen 1, we audit the farmer's current baseline bleed: 4.89M liters of flood water and ₹18,416 in diesel cost.
+> In Screen 2, our **Smart Need-Aware Precision Irrigation Engine** monitors root-zone moisture. When satellite rain probability hits 78%, RainGuard automatically holds irrigation, saving 12,000 liters and ₹450 per session. When water is needed, the motor actuates and shuts off automatically at the 35% target.
+> In Screen 3, our Clean Energy Hub executes solar pump slot reservations at ₹60/hour and pools demand across 3 neighbouring farmers. In Screen 4, Mandi Connect calculates freight-deducted net payouts and locks direct contracts with Sahyadri Farms.
+> In Screen 5, Mitra Voice AI speaks in Hindi and Marathi, backed by an offline queue that stores actions safely when connectivity drops.
+> In Screen 6, our **Post-Harvest Spoilage Shield** actively models biological Q10 respiration decay during highway transit, allowing 1-tap diversion to an FPO solar cold room to prevent 100% of produce from rot, while Climate Defender prepares the farm for 41°C heatwaves.
+> And in Screen 7, the farmer downloads his verifiable Kisan Gaurav Green Certificate.
 > 
-> Our entire codebase has been verified through 12 automated test suites comprising 136 tests passing with zero errors. The software is real, robust, and pilot-ready."*
+> Our entire codebase has been validated through 12 automated test suites comprising 136 tests passing with zero errors. The software is real, robust, and pilot-ready."*
 
 ---
 
@@ -606,6 +626,62 @@ FarmKind operates as a closed-loop cyber-physical orchestration platform for sma
 - **Network-Drop Resilience (True Offline Queue):** In fields with zero cell coverage, mutations are stored in `localStorage` under `X-Idempotency-Key` and automatically reconcile with zero duplicates when the farmer walks into coverage.
 - **Low-Bandwidth Architecture:** Client bundle is lightweight (<194 KB gzip); sub-millisecond local execution ensures responsiveness on entry-level Android devices.
 
+### 10.4 Smart Need-Aware Precision Irrigation Engine & RainGuard Safeguard
+- **Agronomic Model:** Evaluates root-zone capacitive moisture against FAO-56 mid-season curves ($ET_c = ET_o \times K_c = 6.0 \times 1.15 = 6.9\text{ mm/day}$).
+- **RainGuard Decision Safeguard:** When satellite agrometeorology indicates incoming rain probability $\ge 75\%$ (e.g. 78% forecast within 8 hours), the engine overrides routine schedules and issues a deterministic **WAIT / RainGuard HOLD** alert with high confidence. This prevents over-irrigation, protects against root hypoxia, and saves ₹450 and 12,000 liters of water per session.
+- **Target Closed-Loop Actuation:** When soil moisture drops to deficit levels (e.g., 19% VWC), FarmKind actuates a 1-tap solar pump booking and continuously monitors infiltration until reaching the optimal 35% agronomic target, automatically shutting down the pump to eliminate run-off and energy waste.
+- **Transparent Decision Traces:** Rather than presenting an inscrutable AI decision, FarmKind provides an interactive "See Why" breakdown detailing observations, context rules, rejected actions, and agronomic rationale.
+
+### 10.5 Post-Harvest Spoilage Shield & Biological Q10 Respiration Modeling
+FarmKind models perishable post-harvest decay using the biochemical $Q_{10}$ temperature coefficient formula:
+$$R(T) = R_{\text{base}} \times Q_{10}^{\frac{T - T_{\text{base}}}{10}}$$
+For tomatoes ($Q_{10} = 2.2$), every $10^\circ\text{C}$ rise more than doubles cellular respiration, accelerating ethylene production, moisture loss, and tissue breakdown. FarmKind supports 4 distinct crop scenarios:
+1. 🍅 **Tomatoes (1,000 kg Batch in Transit):** Detects highway midday heatwave ($38^\circ\text{C}$ in-crate telemetry, 4-hour traffic jam). Predicts spoilage within 7 hours. Triggers **1-Tap Highway Interception & Diversion** to an FPO Solar Micro-Cold Room ($12^\circ\text{C}$), preserving 100% of produce and saving ₹24,000 in salvage value.
+2. 🫑 **Capsicum (800 kg Batch):** Compares local vs. regional APMC spreads. When local mandi crashes to ₹18/kg while Pimpalgaon APMC surges to ₹34/kg, the engine calculates net realization after deducting truck freight (₹2.50/kg) and directs the vehicle to the higher-demand market, generating +₹9,600 extra profit.
+3. 🍌 **Bananas (1,000 kg Batch):** Senses an ethylene spike during closed-canopy transit. Calculates accelerated ripening curve and reroutes the consignment to an express puree processing facility before over-ripening occurs.
+4. 🧅 **Onions (1,500 kg Batch):** Monitors ambient storage humidity ($>85\%$ RH). Flags imminent black mold (*Aspergillus niger*) germination and activates solar-powered aerated curing blowers.
+
+### 10.6 Climate Defender & Extreme Heat Shock Mitigation
+- **Extreme Heatwave Escalation:** Simulates a regional heat spike from $36^\circ\text{C} \rightarrow 39^\circ\text{C} \rightarrow 41^\circ\text{C}$ with negligible rain probability (8%) and declining soil moisture (28%).
+- **Crop Context Translation:** Translates pure meteorological data into crop-stage specific defenses (e.g., mid-season tomato blossom drop prevention).
+- **Proactive Preparation Plan:** Recommends pulse micro-sprinkler canopy cooling during peak solar irradiation (12:00 PM – 2:30 PM), straw mulching for soil moisture conservation, and shifting manual harvesting to early dawn hours (5:00 AM – 7:30 AM).
+
+### 10.7 Cross-Shield Intelligence (`FarmPriorityEngine`)
+FarmKind does not operate as disconnected siloed modules; it operates through a unified central brain:
+```
+HEAT WAVE EVENT
+     │
+     ▼
+CLIMATE DEFENDER (Assesses 41°C thermal stress on tomato crop)
+     │
+     ▼
+RESOURCE SAVER (Evaluates root-zone moisture deficit & solar pump availability)
+     │
+     ▼
+HARVEST PROTECTOR (Checks in-transit cargo decay rate under tarmac heat)
+     │
+     ▼
+FarmPriorityEngine (Prioritizes Next Best Action by Loss Severity & Urgency)
+```
+The priority engine computes:
+$$\text{Priority Score} = (\text{Urgency} \times 0.3) + (\text{Potential Rupee Loss} \times 0.3) + (\text{Time Sensitivity} \times 0.2) + (\text{Action Feasibility} \times 0.2)$$
+This directly answers the daily morning question of every smallholder: *"आज मेरे खेत में सबसे जरूरी क्या है?"* ("What is the single most urgent priority on my farm right now?").
+
+### 10.8 Village Demand Aggregation & Government Subsidy Schemes Engine
+- **Farmer Group Demand Aggregation:** When an individual 1-acre farmer cannot attract commercial solar service providers alone, FarmKind allows 3 neighbouring farmers to pool their pumping acreage into a contiguous 8–10 acre cluster. This aggregated demand reduces shared solar rental rates from ₹80/hr to ₹60/hr.
+- **Automated Subsidy Eligibility Matching:** The integrated schemes engine instantly evaluates farmer landholding, crop category, and irrigation type against official national and state programs:
+  - **PM-KUSUM (Component B/C):** 60% capital subsidy (30% central MNRE + 30% state MahaUrja), 10% farmer cash share, 30% bank loan with payback calculated from diesel savings.
+  - **PMKSY - Per Drop More Crop:** 55% capital subsidy for drip/micro-irrigation equipment on MahaDBT.
+  - **SMAM (Mechanization):** 50% subsidy for solar-powered sprayers and inter-cultivation implements.
+  - **AIF (Agriculture Infrastructure Fund):** 3% interest subvention on commercial bank loans for community solar micro-cold rooms.
+  - **PMFBY:** Crop insurance enrollment guidelines for notified crops like Nashik tomatoes.
+
+### 10.9 Mandi Connect, Freight-Deducted Net Realization & Direct FPO Contracts
+- **Live Mandi Discovery:** Connects to wholesale APMC feeds across Nashik, Pimpalgaon, and Vashi, displaying real-time modal prices and buyer demand.
+- **Freight-Deducted Net Payout:** Automatically subtracts truck freight per km from gross APMC prices, enabling farmers to identify true net realization rather than falling for deceptive gross price quotes.
+- **Direct Institutional Contracts:** Enables 1-tap contract locking with institutional buyers (Sahyadri Farms FPO, BigBasket, Reliance Fresh) at guaranteed prices (e.g., ₹32.0/kg), eliminating 8%–10% traditional mandi commission and broker deductions.
+- **Cold Storage Arbitrage Advisory:** Compares immediate distress sales against 3-day solar cold storage holding costs (₹180 fee) during regional price surges, delivering +₹7,620 in extra net profit for a 1,200 kg tomato harvest.
+
 ---
 
 ## 11. System Architecture & Flow Specifications
@@ -663,42 +739,111 @@ FarmKind operates as a closed-loop cyber-physical orchestration platform for sma
 
 ---
 
-## 12. Supporting Design Artifacts: 6 Core Project UI Screens
+## 12. Supporting Design Artifacts: Complete 8-Screen Working UI Suite & Diagnostic Controls
 
-Every screen in FarmKind is architected around the core paradigm:  
+Every screen in FarmKind is architected around the core engineering paradigm:  
 **INPUT ➔ INTELLIGENCE ➔ ACTION ➔ OUTCOME**
 
 ```
-┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                             FARMKIND CORE SCREEN ARTIFACT COMPENDIUM                             │
-├────┬───────────────────────┬─────────────────┬──────────────────┬─────────────────┬──────────────┤
-│ #  │ Screen Name & File    │ Input Data      │ Intelligence     │ Action Trigger  │ Outcome      │
-├────┼───────────────────────┼─────────────────┼──────────────────┼─────────────────┼──────────────┤
-│ 1  │ Smart Irrigation Pump │ Soil probe VWC  │ FAO-56 Penman-   │ RainGuard auto- │ Cuts water   │
-│    │ Screen2CommandCenter  │ Satellite rain %│ Monteith +       │ hold or 1-tap   │ use by 33.3%;│
-│    │                       │ Ambient temp    │ threshold checks │ pump dispatch   │ saves ₹450   │
-├────┼───────────────────────┼─────────────────┼──────────────────┼─────────────────┼──────────────┤
-│ 2  │ Post-Harvest Shield   │ In-transit temp,│ Biological Q10   │ 1-Tap execution:│ Prevents 500 │
-│    │ Screen6Shields.tsx    │ transit hours,  │ decay modeling;  │ divert truck to │ kg spoilage; │
-│    │                       │ crate telemetry │ predicts rot hrs │ solar cold hub  │ 100% profit  │
-├────┼───────────────────────┼─────────────────┼──────────────────┼─────────────────┼──────────────┤
-│ 3  │ Clean Energy Hub      │ Hourly rental   │ Diesel cost vs.  │ Books 2-hour    │ Saves ₹12,416│
-│    │ Screen3Resources.tsx  │ requirement     │ shared solar     │ solar pump slot │ cash; zero   │
-│    │                       │ Pump discharge  │ savings calc     │ on micro-grid   │ diesel burn  │
-├────┼───────────────────────┼─────────────────┼──────────────────┼─────────────────┼──────────────┤
-│ 4  │ Baseline Farm State   │ Acreage (3.5 ac)│ Calculates flood │ Farmer reviews  │ Transparency │
-│    │ Screen1Baseline.tsx   │ Crop (Tomato)   │ water (4.89M L)  │ baseline input  │ on current   │
-│    │                       │ Diesel fuel cost│ vs. diesel costs │ cost breakdown  │ inefficiencies│
-├────┼───────────────────────┼─────────────────┼──────────────────┼─────────────────┼──────────────┤
-│ 5  │ Mitra Vernacular Voice│ Spoken Hindi /  │ Gemini Flash REST│ Answers queries │ 100% access  │
-│    │ MitraVoiceModal.tsx   │ Marathi audio   │ Voice AI + local │ & triggers farm │ for illiterate│
-│    │                       │ + offline queue │ TTS + sync queue │ actions offline │ farmers      │
-├────┼───────────────────────┼─────────────────┼──────────────────┼─────────────────┼──────────────┤
-│ 6  │ Impact & Pride Hub    │ Cumulative farm │ Annualized water,│ Download farmer │ Verifiable   │
-│    │ Screen7Impact.tsx     │ telemetry data  │ diesel & rupee   │ pride & credit  │ ESG & credit │
-│    │                       │                 │ savings audit    │ certificate     │ readiness    │
-└────┴───────────────────────┴─────────────────┴──────────────────┴─────────────────┴──────────────┘
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                       FARMKIND COMPLETE SCREEN ARTIFACT COMPENDIUM                                     │
+├────┬─────────────────────────────┬─────────────────────┬──────────────────────┬──────────────────────┬─────────────────┤
+│ #  │ Screen Name & File          │ Input Data          │ Intelligence Engine  │ Action Triggered     │ Measured Outcome│
+├────┼─────────────────────────────┼─────────────────────┼──────────────────────┼──────────────────────┼─────────────────┤
+│ 1  │ Baseline Problem Audit      │ Plot size (3.5 ac), │ Flood irrigation     │ Highlights financial │ Establishes     │
+│    │ Screen1Baseline.tsx         │ crop, diesel pump   │ baseline vs. diesel  │ bleed and prepares   │ savings target: │
+│    │                             │ run hours, fuel rate│ expenditure formulas │ farmer for transition│ ₹12,416/mo      │
+├────┼─────────────────────────────┼─────────────────────┼──────────────────────┼──────────────────────┼─────────────────┤
+│ 2  │ Smart Irrigation Command    │ Root-zone probe VWC │ FAO-56 Penman-       │ RainGuard HOLD alert │ Saves 12,000 L  │
+│    │ Screen2CommandCenter.tsx    │ (34%), satellite    │ Monteith mid-season  │ or 1-tap solar pump  │ water & ₹450 per│
+│    │                             │ rain (78%), ambient │ Kc curves + moisture │ start; auto shut-off │ session; stops  │
+│    │                             │ temperature (36°C)  │ deficit thresholds   │ at 35% target        │ root hypoxia    │
+├────┼─────────────────────────────┼─────────────────────┼──────────────────────┼──────────────────────┼─────────────────┤
+│ 3  │ Shared Clean-Energy Hub     │ Pumping requirement │ Shared solar savings │ 1-Tap solar pump slot│ Saves ₹12,416/mo│
+│    │ Screen3Resources.tsx        │ (hrs/mo), regional  │ vs. diesel baseline; │ reservation; joins   │ cash; unlocks   │
+│    │                             │ solar tariffs, land │ subsidy scoring for  │ 3-farmer pooling     │ 60% PM-KUSUM &  │
+│    │                             │ records & FPO status│ PM-KUSUM, PMKSY, AIF │ cluster; scheme link │ 55% PMKSY aid   │
+├────┼─────────────────────────────┼─────────────────────┼──────────────────────┼──────────────────────┼─────────────────┤
+│ 4  │ Mandi Arbitrage & Contracts │ Live APMC prices    │ Net realization      │ Locks direct contract│ Generates +₹7,620│
+│    │ Screen4ConnectedFarm.tsx    │ across Nashik/Vashi;│ calc (price - freight│ with Sahyadri Farms  │ profit; cuts    │
+│    │                             │ truck freight rates;│ rate); 3-day cold    │ or reserves Pimpalgaon│ 8-10% middleman │
+│    │                             │ institutional bids  │ storage price spread │ cold storage slot    │ commission fees │
+├────┼─────────────────────────────┼─────────────────────┼──────────────────────┼──────────────────────┼─────────────────┤
+│ 5  │ Mitra Conversational Voice  │ Spoken Hindi/Marathi│ Google Gemini 2.0    │ Transcribes query;   │ 100% accessible │
+│    │ Screen5Voice.tsx / MitraFAB │ audio; touch action;│ Flash REST proxy +   │ triggers verified    │ for illiterate  │
+│    │                             │ network drop status │ local regex intent;  │ pump/mandi actions;  │ farmers; zero   │
+│    │                             │                     │ localStorage FIFO Q  │ auto-syncs reconnect │ lost field data │
+├────┼─────────────────────────────┼─────────────────────┼──────────────────────┼──────────────────────┼─────────────────┤
+│ 6  │ Harvest & Climate Defender  │ In-crate telemetry  │ Biological Q10 decay │ 1-Tap diversion to   │ Prevents 500-   │
+│    │ Screen6Shields.tsx          │ (temp, humidity);   │ rate across 4 crops; │ FPO Solar Cold Room; │ 1,000 kg perish-│
+│    │                             │ heatwave spikes     │ Climate Defender heat│ deploys crop canopy  │ able rot; guides│
+│    │                             │ (41°C); rain prob 8%│ risk; Cross-Shield   │ pulse cooling plan   │ 41°C heat defense│
+├────┼─────────────────────────────┼─────────────────────┼──────────────────────┼──────────────────────┼─────────────────┤
+│ 7  │ Unified Impact & Prosperity │ Cumulative telemetry│ Annualized savings   │ Downloads official   │ Verifiable ESG  │
+│    │ Screen7Impact.tsx           │ counters: water,    │ audit (1.63M L water,│ multilingual Kisan   │ impact; bank    │
+│    │                             │ diesel, rupees, rot │ 167.5 L diesel saved)│ Gaurav Green Cert.   │ loan readiness  │
+├────┼─────────────────────────────┼─────────────────────┼──────────────────────┼──────────────────────┼─────────────────┤
+│ 0  │ How FarmKind Works & Guide  │ User interaction &  │ Interactive visual   │ Explores 3 flows:    │ Complete system │
+│    │ ScreenHowItWorks.tsx        │ architectural tour  │ breakdown of Data,   │ Data Flow, Energy    │ mental model for│
+│    │                             │ requests            │ Energy, Money flows  │ Flow, Money Flow     │ judges & users  │
+├────┼─────────────────────────────┼─────────────────────┼──────────────────────┼──────────────────────┼─────────────────┤
+│ SYS│ Live Inspector & Provenance │ Real-time state bus │ Model transparency & │ Live inspection of   │ 100% auditable  │
+│    │ LiveInspectorModal.tsx      │ & test assertions   │ formula provenance;  │ equations; failure   │ mathematical &  │
+│    │ & DemoControls              │                     │ failure state inject │ state validation     │ architectural QA│
+└────┴─────────────────────────────┴─────────────────────┴──────────────────────┴──────────────────────┴─────────────────┘
 ```
+
+### Detailed Functional Screen Walkthrough:
+
+#### 1. Screen 1: Farm Understanding & Problem Audit (`Screen1Baseline.tsx`)
+- **Farmer Persona:** Ramesh Patil, 3.5 acres, Dindori Block, Nashik District, Maharashtra.
+- **Crop Context:** Tomato mid-season (fruit formation stage).
+- **Current Operational Baseline:** 5HP portable diesel pump, flood furrow irrigation, manual guesswork.
+- **The Problem Bleed Exposed:** Shows 4,890,000 liters of monthly water pumping requirement, burning 167.5 liters of diesel at ₹98/L (₹16,416 fuel + ₹2,000 maintenance = **₹18,416/month operating bleed**).
+- **Strategic Impact:** Establishes the concrete financial baseline against which all FarmKind interventions are measured.
+
+#### 2. Screen 2: Smart Need-Aware Precision Irrigation Command Center (`Screen2CommandCenter.tsx`)
+- **Live Root-Zone Telemetry:** Displays 15 cm capacitive soil probe moisture (34% VWC) alongside real-time ambient temperature (36°C) and satellite precipitation probability (78%).
+- **Automated RainGuard Hold:** When precipitation probability $\ge 75\%$, the engine activates the **RainGuard Hold Alert**, holding the pump schedule, preventing waterlogging and root hypoxia, and saving ₹450 / 12,000 L per session.
+- **Closed-Loop Target Actuation:** When soil moisture drops to deficit levels (19% scenario), FarmKind allows 1-tap solar pump actuation, irrigates continuously, and **automatically shuts off the motor when the 35% agronomic target is reached**.
+- **Transparent "See Why" Decision Traces:** Displays observations, context parameters, rejected alternatives, and agronomic justifications with full provenance.
+
+#### 3. Screen 3: Shared Clean-Energy Marketplace, PM-KUSUM & Demand Aggregation (`Screen3Resources.tsx`)
+- **Pay-Per-Use Solar Pump Rental:** Allows booking nearby community solar pumps at ₹60/hour (displacing ₹132/hr diesel cost), generating ₹12,416/month in net household savings.
+- **Farmer Group Demand Aggregation Cluster:** Solves the smallholder scale barrier by formalizing a 3-farmer village cluster pooling pumping hours across contiguous acreage, lowering hourly rental rates and attracting commercial solar providers.
+- **Government Subsidy Matching Engine:** Automated eligibility scoring for PM-KUSUM (60% subsidy: 30% central + 30% state, 10% farmer cash), PMKSY-PDMC (55% drip subsidy on MahaDBT), SMAM (50% mechanization), AIF (3% interest subvention for solar cold rooms), and PMFBY.
+
+#### 4. Screen 4: Real-Time Mandi Connect, APMC Arbitrage & Direct FPO Contracts (`Screen4ConnectedFarm.tsx`)
+- **Live Wholesale Price Discovery:** Real-time APMC price feeds for Nashik, Pimpalgaon, and Vashi mandis.
+- **Freight-Deducted Net Realization:** Automatically deducts truck freight per km from gross mandi quotes so farmers see their true net cash payout.
+- **Direct Institutional Off-Take Contracts:** 1-Tap binding contracts with institutional buyers (Sahyadri Farms FPO, BigBasket, Reliance Fresh) at fixed farmgate rates (e.g. ₹32.0/kg), eliminating 8%–10% mandi broker commissions.
+- **Price Arbitrage Advisory:** Compares immediate distress sales against 3-day solar cold storage holding costs, generating +₹7,620 extra profit for a 1,200 kg tomato batch.
+
+#### 5. Screen 5: Mitra Conversational Voice AI & True Offline Sync Queue (`Screen5Voice.tsx` / `MitraVoiceModal.tsx`)
+- **Universal Rural Accessibility:** Bilingual voice interaction in Hindi, Marathi, and English via floating action button (FAB) or dedicated screen.
+- **Dual Hybrid Intelligence:** Google Gemini 2.0 Flash REST proxy for complex conversational queries + instant local regex rule fallback for field operations.
+- **True Offline Queue:** Field actions are saved to a client-side FIFO queue in `localStorage` under `X-Idempotency-Key` headers, automatically synchronizing upon network reconnect with zero duplicate bookings.
+
+#### 6. Screen 6: Harvest Protector, Climate Defender & Cross-Shield System (`Screen6Shields.tsx`)
+- **Continuous 4-Step Animated Flow:** *Monitor ➔ Understand ➔ Decide ➔ Act*.
+- **4 Agricultural Post-Harvest Scenarios:**
+  - 🍅 *Tomatoes (1,000 kg):* Midday highway heatwave alert ($38^\circ\text{C}$ in-crate) $\rightarrow$ 1-tap diversion to nearby FPO Solar Micro-Cold Room, preventing 100% of produce from rotting.
+  - 🫑 *Capsicum (800 kg):* Mandi price surge arbitrage $\rightarrow$ reroutes to highest net realization market.
+  - 🍌 *Bananas (1,000 kg):* Ethylene ripening surge $\rightarrow$ fast-tracks to express processing hub.
+  - 🧅 *Onions (1,500 kg):* High humidity mold threat $\rightarrow$ reroutes to solar-aerated curing storage.
+- **Climate Defender Panel:** Evaluates extreme heatwave spikes ($36^\circ\text{C} \rightarrow 39^\circ\text{C} \rightarrow 41^\circ\text{C}$) with 8% rain probability, translating meteorological spikes into proactive micro-sprinkler cooling and soil mulch defenses.
+- **Cross-Shield Intelligence (`FarmPriorityEngine`):** Cascades climate events across Climate Defender $\rightarrow$ Soil Moisture $\rightarrow$ In-Transit Cargo, directly answering: *"आज मेरे खेत में सबसे जरूरी क्या है?"*.
+
+#### 7. Screen 7: Unified Impact, Household Prosperity & Kisan Gaurav Green Certificate (`Screen7Impact.tsx`)
+- **Verifiable Cumulative Metrics:** 1.63M liters water saved (-33.3%), 167.5 liters diesel displaced (-100%), ₹12,416/mo cash saved (₹1.49 Lakh/yr), 75% relative spoilage loss prevented.
+- **Kisan Gaurav Green Certificate:** Downloadable & shareable certificate in Marathi, Hindi, and English celebrating the farmer's contribution to climate resilience and groundwater preservation, serving as proof of sustainability for green credit.
+
+#### 8. Screen 0: How FarmKind Works & Architectural Guide (`ScreenHowItWorks.tsx`)
+- Interactive 3-flow architectural visualizer explaining Data Flow, Energy Flow, and Money Flow, alongside a QuickStart guide for competition evaluators.
+
+#### 9. Diagnostic System: Live Inspector & Demo Controller (`LiveInspectorModal.tsx` & `DemoControls`)
+- **Live Inspector Modal:** Provides transparent audit trails for all active equations, live inputs, and simulated parameters.
+- **Demo Controller / Jury Mode:** Scenario switching (Resource Saver, Harvest, Climate, Cross-Shield), simulation clock speeds (1x, 10x, 60x), and failure state injection (Pump Offline, Sensor Stale, Weather Stale, Market Stale, Transport Unavailable).
 
 ---
 
