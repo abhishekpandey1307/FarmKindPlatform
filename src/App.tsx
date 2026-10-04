@@ -3,8 +3,9 @@
 // Root component assembling all 7 screens with navigation
 // =============================================================================
 
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { AppProvider, useApp } from './app/AppContext';
+import { prewarmBackend } from './services/geminiVoiceService';
 import { TopNav, BottomNav, VoiceFAB, ScreenBreadcrumb, DemoControls } from './components/shared/Navigation';
 import { Screen1Baseline } from './components/farm/Screen1Baseline';
 import { Screen2CommandCenter } from './components/intelligence/Screen2CommandCenter';
@@ -66,6 +67,11 @@ import { AnimatedIntro } from './components/shared/AnimatedIntro';
 
 function AppShell() {
   const { showIntro, setShowIntro } = useApp();
+
+  // Pre-warm backend silently on initial app load so Render container wakes up during Intro / Screen 1
+  useEffect(() => {
+    prewarmBackend();
+  }, []);
 
   return (
     <div className="app-shell">

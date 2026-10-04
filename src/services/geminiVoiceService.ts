@@ -49,6 +49,36 @@ export async function checkBackendHealth(): Promise<BackendHealthStatus> {
 }
 
 /**
+ * Silently pre-warms the backend on initial application boot.
+ * Triggers Render / cloud container wake-up immediately in the background
+ * without blocking UI rendering, so by the time the user or judge interacts with
+ * an API feature (Voice Mitra, weather sync, etc.), the backend is already awake.
+ */
+export function prewarmBackend(): void {
+  try {
+    const baseUrl = getApiBaseUrl();
+    if (!baseUrl || typeof window === 'undefined') return;
+
+    fetch(`${baseUrl}/api/health`, {
+      method: 'GET',
+      headers: { Accept: 'application/json' },
+      keepalive: true,
+      cache: 'no-cache',
+    })
+      .then(res => {
+        if (res.ok) {
+          console.log('[FarmKind] ⚡ Backend pre-warmed & ready');
+        }
+      })
+      .catch(() => {
+        // Silent catch: the HTTP request was already received by Render, triggering its container boot.
+      });
+  } catch {
+    // Silent guard
+  }
+}
+
+/**
  * Serializes 100% of the live AppState & FarmState into a rich, structured context block.
  * This guarantees the reasoning model is fully aware of every live sensor, weather spike,
  * crop stage, and Mandi price in real time.
