@@ -4,6 +4,12 @@
 **Core Thesis:** *"Helping Every Small Farm Do More With Less."*  
 *Less Water. Less Energy. Less Money. Less Waste. → More Productivity, Resilience, and Climate Readiness.*
 
+> **🌐 Official Competition Submission Links & Repository Metadata:**
+> - **GitHub Source Code Repository:** [https://github.com/abhishekpandey1307/FarmKindPlatform](https://github.com/abhishekpandey1307/FarmKindPlatform)
+> - **Live Web Application (Vercel):** [https://farm-kind-platform.vercel.app](https://farm-kind-platform.vercel.app) *(Replace with your live deployment URL if different)*
+> - **Backend API Service (Render):** [https://farmkind-backend.onrender.com/api/health](https://farmkind-backend.onrender.com/api/health) *(Silent pre-warm enabled)*
+> - **Founder & Systems Architect:** Abhishek Pandey (`write2abhishek4400@gmail.com`)
+
 ---
 
 ## 📋 Comprehensive Compliance & Evaluation Checklist
@@ -327,6 +333,17 @@
 │ reservation cards.        │ with idempotent replay.   │ avoided, certificate.   │
 └───────────────────────────┴───────────────────────────┴─────────────────────────┘
 ```
+
+#### Visual UI Prototype Artifacts:
+*(Place PNG screenshots into `public/screenshots/` to display directly)*
+
+| 1. Baseline Farm State (`Screen 1`) | 2. Command Center & RainGuard (`Screen 2`) | 3. Clean Energy Solar Hub (`Screen 3`) |
+| :---: | :---: | :---: |
+| ![1. Baseline Farm State](public/screenshots/01_baseline_farm.png) | ![2. Command Center](public/screenshots/02_command_center_rainguard.png) | ![3. Solar Hub](public/screenshots/03_solar_resource_hub.png) |
+
+| 4. Connected Farm Twin (`Screen 4`) | 5. Mitra Voice AI & Offline Sync | 6. Impact & Pride Certificate (`Screen 7`) |
+| :---: | :---: | :---: |
+| ![4. Topology](public/screenshots/04_connected_topology.png) | ![5. Mitra Voice](public/screenshots/05_mitra_voice_offline_sync.png) | ![6. Impact Certificate](public/screenshots/06_impact_pride_certificate.png) |
 
 #### Transparent Software Implementation Status:
 - **[VERIFIED IMPLEMENTATION]:** Functional software prototype built with React 19, TypeScript, and native Node.js HTTP server.
