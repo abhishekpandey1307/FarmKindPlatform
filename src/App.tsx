@@ -42,21 +42,29 @@ function ScreenRouter() {
 
 function OfflineBanner() {
   const { state } = useApp();
-  if (!state.isOffline) return null;
+  // Show banner if explicitly offline OR if there are pending actions queued
+  if (!state.isOffline && state.offlineQueueCount === 0) return null;
+
   return (
     <div style={{
-      background: 'rgba(245, 158, 11, 0.15)',
-      borderBottom: '1px solid rgba(245, 158, 11, 0.4)',
+      background: state.isOffline ? 'rgba(245, 158, 11, 0.15)' : 'rgba(56, 189, 248, 0.15)',
+      borderBottom: state.isOffline ? '1px solid rgba(245, 158, 11, 0.4)' : '1px solid rgba(56, 189, 248, 0.4)',
       padding: '8px 16px',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
       fontSize: '12px',
-      color: 'var(--clr-solar-amber)',
+      color: state.isOffline ? 'var(--clr-solar-amber)' : 'var(--clr-ai-cyan)',
       fontWeight: 600,
     }} role="status" aria-live="polite">
-      <span>📶 Low-Internet Mode: Operating on cached FarmState</span>
-      <span className="badge badge--warning">{state.offlineQueueCount} actions queued locally</span>
+      <span>
+        {state.isOffline
+          ? '📶 Low-Internet Mode: Operating on cached FarmState'
+          : '🔄 Cloud Sync: Auto-uploading offline farm records...'}
+      </span>
+      <span className="badge badge--warning">
+        {state.offlineQueueCount} {state.offlineQueueCount === 1 ? 'action queued' : 'actions queued'}
+      </span>
     </div>
   );
 }

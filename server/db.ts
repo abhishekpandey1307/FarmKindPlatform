@@ -194,10 +194,14 @@ export function updateFarmerProfile(updates: Partial<FarmerProfileRecord>): Farm
 /**
  * Adds a new verified soil telemetry log to historical records.
  */
-export function recordSoilLog(moisture: number, temperature: number, source: string = 'IN_SITU_PROBE'): SoilTelemetryLog {
+export function recordSoilLog(moisture: number, temperature: number, source: string = 'IN_SITU_PROBE', logId?: string): SoilTelemetryLog {
   const db = getDatabaseState();
+  if (logId) {
+    const existing = db.soilLogs.find(s => s.id === logId);
+    if (existing) return existing;
+  }
   const newLog: SoilTelemetryLog = {
-    id: `soil-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
+    id: logId || `soil-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
     timestamp: new Date().toISOString(),
     moisturePercent: moisture,
     temperatureC: temperature,
@@ -213,11 +217,16 @@ export function recordSoilLog(moisture: number, temperature: number, source: str
 
 /**
  * Adds a new solar booking record.
+ * Idempotent: will not insert duplicate if orderId already exists.
  */
-export function addSolarBooking(booking: Omit<SolarBookingRecord, 'orderId' | 'createdAt'>): SolarBookingRecord {
+export function addSolarBooking(booking: Omit<SolarBookingRecord, 'orderId' | 'createdAt'> & { orderId?: string }): SolarBookingRecord {
   const db = getDatabaseState();
+  if (booking.orderId) {
+    const existing = db.solarBookings.find(b => b.orderId === booking.orderId);
+    if (existing) return existing;
+  }
   const newBooking: SolarBookingRecord = {
-    orderId: `SOLAR-BK-${Date.now().toString().slice(-4)}`,
+    orderId: booking.orderId || `SOLAR-BK-${Date.now().toString().slice(-4)}`,
     ...booking,
     createdAt: new Date().toISOString(),
   };
@@ -228,11 +237,16 @@ export function addSolarBooking(booking: Omit<SolarBookingRecord, 'orderId' | 'c
 
 /**
  * Logs an autonomous AI decision audit record.
+ * Idempotent: will not insert duplicate if decisionId already exists.
  */
-export function auditAiDecision(decision: Omit<AiDecisionAuditRecord, 'decisionId' | 'timestamp'>): AiDecisionAuditRecord {
+export function auditAiDecision(decision: Omit<AiDecisionAuditRecord, 'decisionId' | 'timestamp'> & { decisionId?: string }): AiDecisionAuditRecord {
   const db = getDatabaseState();
+  if (decision.decisionId) {
+    const existing = db.decisionAuditLogs.find(d => d.decisionId === decision.decisionId);
+    if (existing) return existing;
+  }
   const record: AiDecisionAuditRecord = {
-    decisionId: `DEC-${Date.now()}`,
+    decisionId: decision.decisionId || `DEC-${Date.now()}`,
     timestamp: new Date().toISOString(),
     ...decision,
   };

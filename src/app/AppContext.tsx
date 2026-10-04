@@ -42,6 +42,14 @@ import {
 } from '../engine/solarMarketEngine';
 import { createSensorAdapter, type SensorAdapter } from '../engine/sensorAdapter';
 import type { SupportedLanguage } from '../i18n/translations';
+import {
+  enqueueOfflineMutation,
+  flushOfflineQueue,
+  initializeAutoSync,
+  getOfflineQueue,
+  isNetworkOnline,
+} from '../services/offlineSyncEngine';
+import { getApiBaseUrl } from '../services/geminiVoiceService';
 
 // ─── STATE ───────────────────────────────────────────────────────────────────
 
@@ -133,7 +141,9 @@ export type AppAction =
   | { type: 'SET_UPGRADE_STATUS'; key: keyof FarmUpgrades; active: boolean }
   | { type: 'SET_CAME_FROM_RECOMMENDATIONS'; value: boolean }
   | { type: 'SET_FARM_ANALYZED'; analyzed: boolean }
-  | { type: 'SET_MARKET_TAB'; tab: 'SOLAR' | 'SCHEMES' | 'GROUP' };
+  | { type: 'SET_MARKET_TAB'; tab: 'SOLAR' | 'SCHEMES' | 'GROUP' }
+  | { type: 'SET_OFFLINE'; isOffline: boolean }
+  | { type: 'SET_OFFLINE_QUEUE_COUNT'; count: number };
 
 // ─── REDUCER ─────────────────────────────────────────────────────────────────
 
@@ -272,7 +282,21 @@ export function appReducer(state: AppState, action: AppAction): AppState {
       return {
         ...state,
         isOffline: nextOffline,
-        offlineQueueCount: nextOffline ? state.offlineQueueCount + 1 : 0,
+        offlineQueueCount: getOfflineQueue().length,
+      };
+    }
+
+    case 'SET_OFFLINE': {
+      return {
+        ...state,
+        isOffline: action.isOffline,
+      };
+    }
+
+    case 'SET_OFFLINE_QUEUE_COUNT': {
+      return {
+        ...state,
+        offlineQueueCount: action.count,
       };
     }
 
@@ -681,8 +705,8 @@ const initialAppState: AppState = {
   showLiveInspector: false,
   isConnecting: false,
   connectionStep: 0,
-  isOffline: false,
-  offlineQueueCount: 0,
+  isOffline: typeof navigator !== 'undefined' && typeof navigator.onLine === 'boolean' ? !navigator.onLine : false,
+  offlineQueueCount: typeof window !== 'undefined' ? getOfflineQueue().length : 0,
 
   // Real data initial state
   liveSync: {
@@ -926,28 +950,30 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         `Avoided ${booking.dieselDisplacedLiters} L Diesel · Saved ₹${booking.costSavedVsDieselInr.toLocaleString('en-IN')}`
       );
     }
-    // Persist to secure backend database (server/db.ts)
-    try {
-      const apiBase = import.meta.env.VITE_BACKEND_URL
-        ? import.meta.env.VITE_BACKEND_URL.replace(/\/$/, '')
-        : (typeof window !== 'undefined' && window.location?.origin ? window.location.origin : '');
-      fetch(`${apiBase}/api/bookings`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          orderId: booking.bookingId,
-          farmerId: booking.farmerId,
-          date: new Date().toISOString().split('T')[0],
-          slotTime: booking.slotStartTime || `${booking.durationUnits} ${booking.unitType}`,
-          dieselSavedLiters: booking.dieselDisplacedLiters,
-          financialSavedInr: booking.costSavedVsDieselInr,
-          status: 'CONFIRMED',
-        }),
-      }).catch(() => {
-        // Safe offline fallback
+    // 1. Enqueue persistent mutation to local queue FIRST (survives refresh / browser closure)
+    const bookingPayload = {
+      orderId: booking.bookingId,
+      farmerId: booking.farmerId,
+      date: new Date().toISOString().split('T')[0],
+      slotTime: booking.slotStartTime || `${booking.durationUnits} ${booking.unitType}`,
+      dieselSavedLiters: booking.dieselDisplacedLiters,
+      financialSavedInr: booking.costSavedVsDieselInr,
+      status: 'CONFIRMED',
+    };
+
+    enqueueOfflineMutation({
+      id: booking.bookingId,
+      type: 'CREATE_SOLAR_BOOKING',
+      endpoint: '/api/bookings',
+      method: 'POST',
+      payload: bookingPayload,
+    });
+
+    // 2. Trigger non-blocking sync if online and not in simulated offline mode
+    if (isNetworkOnline() && !state.isOffline) {
+      flushOfflineQueue(getApiBaseUrl()).catch(() => {
+        // Safe: stays in offline queue and retries when network or backend returns
       });
-    } catch {
-      // Ignore if fetch not supported or offline
     }
 
     return booking;
@@ -1124,6 +1150,32 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       // ignore storage errors
     }
   }, [state.activeScreen, state.farmState.farm.soil]);
+
+  // ── Auto-Sync Engine: Listen to online events and sync pending offline mutations ──
+  useEffect(() => {
+    const cleanup = initializeAutoSync(
+      getApiBaseUrl,
+      count => dispatch({ type: 'SET_OFFLINE_QUEUE_COUNT', count })
+    );
+
+    const handleOnline = () => {
+      dispatch({ type: 'SET_OFFLINE', isOffline: false });
+      flushOfflineQueue(getApiBaseUrl()).catch(() => {});
+    };
+
+    const handleOffline = () => {
+      dispatch({ type: 'SET_OFFLINE', isOffline: true });
+    };
+
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+
+    return () => {
+      cleanup();
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+    };
+  }, []);
 
   const value: AppContextValue = {
     state,
