@@ -19,36 +19,7 @@ const SCREENS = [
 ];
 
 
-function HomeIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-      <polyline points="9 22 9 12 15 12 15 22"/>
-    </svg>
-  );
-}
 
-function FarmIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 22V12"/>
-      <path d="M5 12H2a10 10 0 0 0 20 0h-3"/>
-      <circle cx="12" cy="5" r="3"/>
-      <path d="M6.168 11.5A6.011 6.011 0 0 0 12 15a6.011 6.011 0 0 0 5.832-3.5"/>
-    </svg>
-  );
-}
-
-function ShieldIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-    </svg>
-  );
-}
 
 function MicIcon() {
   return (
@@ -197,43 +168,7 @@ export function TopNav() {
 // ─── BOTTOM NAV ──────────────────────────────────────────────────────────────
 
 export function BottomNav() {
-  const { state, navigateTo } = useApp();
-  const { activeScreen, language } = state;
-  const currentLang = language ?? 'hi';
-
-  const localizedBottomNav = [
-    { key: 'HOME', label: TRANSLATIONS.nav.home[currentLang] || 'HOME', icon: HomeIcon, screens: [1, 2] },
-    { key: 'MARKET', label: TRANSLATIONS.nav.market[currentLang] || 'MARKET', icon: FarmIcon, screens: [3, 4] },
-    { key: 'SHIELDS', label: TRANSLATIONS.nav.shields[currentLang] || 'SHIELDS', icon: ShieldIcon, screens: [6, 7] },
-  ];
-
-  const isActive = (screens: number[]) => screens.includes(activeScreen);
-
-  const handleNavClick = (_screens: number[], key: string) => {
-    // Navigate to the primary screen of this group
-    if (key === 'HOME') navigateTo(activeScreen === 1 ? 2 : 1);
-    else if (key === 'MARKET') navigateTo(activeScreen === 3 ? 4 : 3);
-    else if (key === 'SHIELDS') navigateTo(activeScreen === 6 ? 7 : 6);
-  };
-
-  return (
-    <nav className="bottom-nav" role="navigation" aria-label="Main navigation">
-      {localizedBottomNav.map(({ key, label, icon: Icon, screens }) => (
-        <button
-          key={key}
-          className={`bottom-nav__item ${isActive(screens) ? 'bottom-nav__item--active' : ''}`}
-          onClick={() => handleNavClick(screens, key)}
-          aria-label={label}
-          aria-current={isActive(screens) ? 'page' : undefined}
-        >
-          <div className="bottom-nav__icon">
-            <Icon />
-          </div>
-          <span className="bottom-nav__label">{label}</span>
-        </button>
-      ))}
-    </nav>
-  );
+  return null;
 }
 
 // ─── VOICE FAB ────────────────────────────────────────────────────────────────

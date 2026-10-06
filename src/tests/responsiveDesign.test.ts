@@ -42,12 +42,12 @@ describe('Universal Responsive Design Architecture', () => {
     expect(css).toContain('@media (max-width: 480px)');
   });
 
-  it('4. Floating desktop dock vs mobile bottom navigation are configured properly', () => {
+  it('4. Bottom navigation is cleanly disabled to maximize usable screen space', () => {
     const cssPath = path.resolve(__dirname, '../styles/global.css');
     const css = fs.readFileSync(cssPath, 'utf8');
 
     expect(css).toContain('.bottom-nav');
-    expect(css).toMatch(/@media \(min-width:\s*1024px\)[\s\S]*?\.bottom-nav[\s\S]*?transform:\s*translateX\(-50%\)/);
+    expect(css).toContain('display: none !important;');
     expect(css).toMatch(/@media \(min-width:\s*1024px\)[\s\S]*?\.voice-fab/);
   });
 

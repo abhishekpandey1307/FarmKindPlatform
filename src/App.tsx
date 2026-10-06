@@ -6,7 +6,7 @@
 import { Suspense, useEffect } from 'react';
 import { AppProvider, useApp } from './app/AppContext';
 import { prewarmBackend } from './services/geminiVoiceService';
-import { TopNav, BottomNav, VoiceFAB, ScreenBreadcrumb, DemoControls } from './components/shared/Navigation';
+import { TopNav, VoiceFAB, ScreenBreadcrumb, DemoControls } from './components/shared/Navigation';
 import { Screen1Baseline } from './components/farm/Screen1Baseline';
 import { Screen2CommandCenter } from './components/intelligence/Screen2CommandCenter';
 import { Screen3Resources } from './components/resource-saver/Screen3Resources';
@@ -108,7 +108,6 @@ function AppShell() {
       </main>
 
       <VoiceFAB />
-      <BottomNav />
       <DemoControls />
       <LiveInspectorModal />
       <CelebrationModal />
