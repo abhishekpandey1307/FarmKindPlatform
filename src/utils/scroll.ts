@@ -26,8 +26,8 @@ export function isElementComfortablyVisible(
       ? document.documentElement.clientHeight
       : 800;
 
-  // Find scroll container (.screen-scroll) if present, else fallback to window viewport
-  const container = typeof el.closest === 'function' ? el.closest('.screen-scroll') : null;
+  // Find scroll container (.screen-content or .screen-scroll) if present, else fallback to window viewport
+  const container = typeof el.closest === 'function' ? el.closest('.screen-content') || el.closest('.screen-scroll') : null;
   let containerTop = topPadding;
   let containerBottom = windowHeight - bottomPadding;
 

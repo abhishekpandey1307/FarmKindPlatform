@@ -107,16 +107,21 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  height: 100%;
+  height: 100dvh;
+  overflow: hidden;
 }
 
 body {
   margin: 0;
+  padding: 0;
   font-family: var(--font-sans);
   background-color: var(--bg-base);
   color: var(--txt-primary);
   line-height: 1.5;
-  min-height: 100dvh;
-  min-height: 100vh;
+  height: 100%;
+  height: 100dvh;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "cv11", "ss01", "ss03";
@@ -131,9 +136,11 @@ button {
 }
 
 #root {
-  min-height: 100dvh;
+  height: 100%;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 /* ─── REDUCED MOTION ────────────────────────────────────────────────────────── */
@@ -216,13 +223,16 @@ button {
 .app-shell {
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
-  min-height: 100vh;
+  height: 100%;
+  height: 100dvh;
+  max-height: 100dvh;
   width: 100%;
   max-width: 100%;
   position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
   padding-top: var(--nav-top-height);
-  padding-bottom: calc(var(--nav-bottom-height) + env(safe-area-inset-bottom, 0px) + 36px);
+  padding-bottom: var(--nav-bottom-height);
   background:
     radial-gradient(ellipse 80% 60% at 50% -10%, rgba(34, 197, 94, 0.06) 0%, transparent 60%),
     radial-gradient(ellipse 60% 40% at 80% 90%, rgba(56, 189, 248, 0.04) 0%, transparent 50%),
@@ -230,11 +240,37 @@ button {
 }
 
 .screen-content {
-  flex: 1 0 auto;
+  flex: 1 1 0%;
+  min-height: 0;
   width: 100%;
   box-sizing: border-box;
-  overflow: visible;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  touch-action: pan-y;
+  overscroll-behavior-y: contain;
   padding: var(--sp-4);
+  padding-bottom: calc(var(--sp-6) + env(safe-area-inset-bottom, 0px) + 24px) !important;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(34, 197, 94, 0.5) rgba(255, 255, 255, 0.04);
+}
+
+.screen-content::-webkit-scrollbar {
+  width: 6px;
+  display: block;
+}
+
+.screen-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 4px;
+}
+
+.screen-content::-webkit-scrollbar-thumb {
+  background: rgba(34, 197, 94, 0.45);
+  border-radius: 4px;
+}
+
+.screen-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 197, 94, 0.75);
 }
 
 @media (min-width: 768px) {
@@ -3313,11 +3349,13 @@ img, video, canvas, svg {
   .screen-content {
     max-width: 100% !important;
     padding: 10px 12px !important;
-    overflow: visible !important;
+    padding-bottom: calc(var(--sp-6) + env(safe-area-inset-bottom, 0px) + 32px) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
   }
   .app-shell {
     padding-top: var(--nav-top-height);
-    padding-bottom: calc(var(--nav-bottom-height) + env(safe-area-inset-bottom, 0px) + 72px) !important;
+    padding-bottom: var(--nav-bottom-height) !important;
   }
   .card {
     padding: var(--sp-3) !important;

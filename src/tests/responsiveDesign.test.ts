@@ -67,16 +67,18 @@ describe('Universal Responsive Design Architecture', () => {
     expect(css).toMatch(/clamp\(/);
   });
 
-  it('7. Mobile touch scrolling is fully unblocked on body and screen containers', () => {
+  it('7. Mobile touch scrolling is fully enabled with momentum and visible scrollbar', () => {
     const cssPath = path.resolve(__dirname, '../styles/global.css');
     const css = fs.readFileSync(cssPath, 'utf8');
 
-    // Body and html do not have overflow-x hidden or clip locking touch recognizers
-    expect(css).not.toContain('body {\n  overflow-x: hidden');
-    expect(css).not.toContain('html {\n  overflow-x: hidden');
+    // screen-content has explicit overflow-y auto and iOS momentum scrolling
+    expect(css).toContain('overflow-y: auto !important;');
+    expect(css).toContain('-webkit-overflow-scrolling: touch !important;');
+    expect(css).toContain('touch-action: pan-y;');
 
-    // Screen content does NOT trap mobile scroll with overscroll-behavior-y contain
-    expect(css).not.toContain('overscroll-behavior-y: contain;');
+    // scrollbar styling is present for visible side scrollbar on smartphones
+    expect(css).toContain('.screen-content::-webkit-scrollbar');
+    expect(css).toContain('scrollbar-width: thin;');
   });
 
   it('8. Safe area padding-bottom on mobile prevents fixed BottomNav and VoiceFAB overlap', () => {
