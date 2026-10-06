@@ -833,7 +833,13 @@ const AppContext = createContext<AppContextValue>(defaultContextValue);
 
 export function AppProvider({ children }: { children: React.ReactNode }) {
   const [state, dispatch] = useReducer(appReducer, initialAppState);
-  const [showIntro, setShowIntro] = useState(true);
+  const [showIntro, setShowIntro] = useState(() => {
+    try {
+      return sessionStorage.getItem('farmkind_seen_intro') !== 'true';
+    } catch {
+      return true;
+    }
+  });
   const replayIntro = useCallback(() => setShowIntro(true), []);
   const [showQuickGuide, setShowQuickGuide] = useState(() => {
     try {

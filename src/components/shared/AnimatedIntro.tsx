@@ -22,6 +22,11 @@ export function AnimatedIntro({ onComplete, autoDismissMs = 6000 }: AnimatedIntr
   const handleExit = useCallback(() => {
     if (hasExitedRef.current) return;
     hasExitedRef.current = true;
+    try {
+      sessionStorage.setItem('farmkind_seen_intro', 'true');
+    } catch {
+      // ignore
+    }
     setIsExiting(true);
     setTimeout(() => {
       onComplete();
@@ -131,7 +136,7 @@ export function AnimatedIntro({ onComplete, autoDismissMs = 6000 }: AnimatedIntr
       </div>
 
       {/* Main Centerpiece Stage */}
-      <div className="intro-stage" onClick={(e) => e.stopPropagation()}>
+      <div className="intro-stage">
         {/* Glowing Brand Emblem */}
         <div className="intro-emblem-wrap">
           <div className="intro-emblem-glow" aria-hidden="true" />
