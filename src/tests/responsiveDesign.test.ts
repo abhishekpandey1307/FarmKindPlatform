@@ -66,4 +66,25 @@ describe('Universal Responsive Design Architecture', () => {
     expect(css).toContain('.section-header__title');
     expect(css).toMatch(/clamp\(/);
   });
+
+  it('7. Mobile touch scrolling is fully unblocked on body and screen containers', () => {
+    const cssPath = path.resolve(__dirname, '../styles/global.css');
+    const css = fs.readFileSync(cssPath, 'utf8');
+
+    // Body supports natural touch inertia and pan-y
+    expect(css).toContain('touch-action: pan-y;');
+    expect(css).toContain('-webkit-overflow-scrolling: touch;');
+    expect(css).toContain('overflow-y: auto;');
+
+    // Screen content does NOT trap mobile scroll with overscroll-behavior-y contain
+    expect(css).not.toContain('overscroll-behavior-y: contain;');
+  });
+
+  it('8. Safe area padding-bottom on mobile prevents fixed BottomNav and VoiceFAB overlap', () => {
+    const cssPath = path.resolve(__dirname, '../styles/global.css');
+    const css = fs.readFileSync(cssPath, 'utf8');
+
+    expect(css).toContain('safe-area-inset-bottom');
+  });
 });
+
