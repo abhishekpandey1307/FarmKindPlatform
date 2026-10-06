@@ -107,24 +107,16 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
-  height: auto;
-  min-height: 100%;
 }
 
 body {
   margin: 0;
-  padding: 0;
   font-family: var(--font-sans);
   background-color: var(--bg-base);
   color: var(--txt-primary);
   line-height: 1.5;
-  min-height: 100%;
   min-height: 100dvh;
   min-height: 100vh;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  touch-action: pan-y;
-  overscroll-behavior-y: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "cv11", "ss01", "ss03";
@@ -224,13 +216,11 @@ button {
 .app-shell {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
   min-height: 100dvh;
   min-height: 100vh;
   width: 100%;
   max-width: 100%;
   position: relative;
-  overflow-x: hidden;
   padding-top: var(--nav-top-height);
   padding-bottom: calc(var(--nav-bottom-height) + env(safe-area-inset-bottom, 0px) + 36px);
   background:
@@ -3290,13 +3280,7 @@ button {
    Guarantees seamless responsive layout across all screens (320px to 2560px+)
    ============================================================================= */
 
-/* ─── 1. CORE CONTAINER & OVERFLOW SAFETY ────────────────────────────────────── */
-
-.app-shell, .app-wrapper, #root {
-  overflow-x: hidden;
-  max-width: 100%;
-  box-sizing: border-box;
-}
+/* ─── 1. CORE CONTAINER SAFETY ───────────────────────────────────────────────── */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -3727,12 +3711,6 @@ img, video, canvas, svg {
 }
 
 /* ─── 12. UI/UX EXPERT MOBILE & TOUCH OPTIMIZATIONS ───────────────────────────── */
-
-.app-shell, .app-wrapper, #root {
-  max-width: 100%;
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
 
 @media (max-width: 640px) {
   /* Ergonomic mobile touch targets (UI/UX standard: 42-48px) */

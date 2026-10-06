@@ -71,10 +71,9 @@ describe('Universal Responsive Design Architecture', () => {
     const cssPath = path.resolve(__dirname, '../styles/global.css');
     const css = fs.readFileSync(cssPath, 'utf8');
 
-    // Body supports natural touch inertia and pan-y
-    expect(css).toContain('touch-action: pan-y;');
-    expect(css).toContain('-webkit-overflow-scrolling: touch;');
-    expect(css).toContain('overflow-y: auto;');
+    // Body and html do not have overflow-x hidden or clip locking touch recognizers
+    expect(css).not.toContain('body {\n  overflow-x: hidden');
+    expect(css).not.toContain('html {\n  overflow-x: hidden');
 
     // Screen content does NOT trap mobile scroll with overscroll-behavior-y contain
     expect(css).not.toContain('overscroll-behavior-y: contain;');
