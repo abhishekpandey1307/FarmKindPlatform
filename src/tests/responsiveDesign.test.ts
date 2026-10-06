@@ -87,5 +87,39 @@ describe('Universal Responsive Design Architecture', () => {
 
     expect(css).toContain('safe-area-inset-bottom');
   });
+
+  it('9. Mobile input elements use font-size 16px to prevent unwanted iOS Safari viewport auto-zoom', () => {
+    const cssPath = path.resolve(__dirname, '../styles/global.css');
+    const css = fs.readFileSync(cssPath, 'utf8');
+
+    expect(css).toContain('font-size: 16px !important;');
+  });
+
+  it('10. Safe area insets dynamically protect TopNav and BottomNav on notched/island displays', () => {
+    const cssPath = path.resolve(__dirname, '../styles/global.css');
+    const css = fs.readFileSync(cssPath, 'utf8');
+
+    expect(css).toContain('--safe-top:');
+    expect(css).toContain('--safe-bottom:');
+    expect(css).toContain('env(safe-area-inset-top');
+    expect(css).toContain('env(safe-area-inset-bottom');
+  });
+
+  it('11. Touch ergonomics enabled: transparent tap highlights, manipulation touch-action, and tactile active press', () => {
+    const cssPath = path.resolve(__dirname, '../styles/global.css');
+    const css = fs.readFileSync(cssPath, 'utf8');
+
+    expect(css).toContain('-webkit-tap-highlight-color: transparent;');
+    expect(css).toContain('touch-action: manipulation;');
+    expect(css).toContain('transform: scale(0.96) !important;');
+  });
+
+  it('12. Mobile modals are styled as ergonomic bottom sheets with backdrop safe margins', () => {
+    const cssPath = path.resolve(__dirname, '../styles/global.css');
+    const css = fs.readFileSync(cssPath, 'utf8');
+
+    expect(css).toContain('align-items: flex-end !important;');
+    expect(css).toMatch(/border-radius:\s*var\(--radius-2xl\)\s*var\(--radius-2xl\)/);
+  });
 });
 

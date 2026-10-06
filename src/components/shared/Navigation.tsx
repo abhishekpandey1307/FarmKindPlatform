@@ -242,9 +242,12 @@ export function VoiceFAB() {
   const { navigateTo, state } = useApp();
   const isVoiceScreen = state.activeScreen === 5;
 
+  // On Voice AI screen, do not show floating FAB so it never blocks chat messages or mic controls
+  if (isVoiceScreen) return null;
+
   return (
     <button
-      className={`voice-fab ${isVoiceScreen ? 'voice-fab--listening' : ''}`}
+      className="voice-fab"
       onClick={() => navigateTo(5)}
       aria-label="Open Voice AI"
       id="btn-voice-fab"
