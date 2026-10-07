@@ -539,6 +539,45 @@ export const TRANSLATIONS = {
       },
     },
   },
+
+  // Floating Farm Mitra Voice Mascot & Speech Bubble
+  floatingVoiceMitra: {
+    title: {
+      en: 'Farm Mitra',
+      hi: 'फार्म मित्र (Farm Mitra)',
+      mr: 'फार्म मित्र (Farm Mitra)',
+      kn: 'ಫಾರ್ಮ್ ಮಿತ್ರ (Farm Mitra)',
+      te: 'ఫార్మ్ మిత్ర (Farm Mitra)',
+    },
+    speechBubble: {
+      en: "Ask anything! I'm your Farm Mitra, here to help.",
+      hi: "कुछ भी पूछें! मैं आपका फार्म मित्र हूँ, आपकी सहायता के लिए तैयार।",
+      mr: "काहीही विचारा! मी तुमचा फार्म मित्र, मदतीसाठी सोबत आहे.",
+      kn: "ಏನನ್ನಾದರೂ ಕೇಳಿ! ನಾನು ನಿಮ್ಮ ಫಾರ್ಮ್ ಮಿತ್ರ, ಸಹಾಯ ಮಾಡಲು ಇಲ್ಲಿದ್ದೇನೆ.",
+      te: "ఏదైనా అడగండి! నేను మీ ఫార్మ్ మిత్రను, మీకు సహాయం చేయడానికి సిద్ధంగా ఉన్నాను.",
+    },
+    speechHint: {
+      en: 'Tap mic or talk in your language',
+      hi: 'बोलकर बात करने के लिए माइक दबाएं',
+      mr: 'आपल्या भाषेत बोलण्यासाठी माइक दाबा',
+      kn: 'ಮಾತನಾಡಲು ಮೈಕ್ ಒತ್ತಿ',
+      te: 'మాట్లాడటానికి మైక్ నొక్కండి',
+    },
+    badgeOnline: {
+      en: 'AI ONLINE',
+      hi: 'मित्र सक्रिय',
+      mr: 'मित्र सक्रिय',
+      kn: 'ಆನ್‌ಲೈನ್',
+      te: 'ఆన్‌లైన్',
+    },
+    closeTooltip: {
+      en: 'Dismiss tooltip',
+      hi: 'संदेश बंद करें',
+      mr: 'संदेश बंद करा',
+      kn: 'ಮುಚ್ಚಿ',
+      te: 'మూసివేయి',
+    },
+  },
 } as const;
 
 /**

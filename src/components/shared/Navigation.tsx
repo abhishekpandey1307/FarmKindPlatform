@@ -6,6 +6,7 @@ import { useRef, useState, useEffect, useCallback } from 'react';
 import { useApp } from '../../app/AppContext';
 import { LanguageSelector } from './LanguageSelector';
 import { TRANSLATIONS } from '../../i18n/translations';
+import { FarmMitraMascot } from './FarmMitraMascot';
 
 const SCREENS = [
   { id: 0, label: 'How FarmKind Works', icon: '📖', navGroup: 'GUIDE' },
@@ -171,24 +172,104 @@ export function BottomNav() {
   return null;
 }
 
-// ─── VOICE FAB ────────────────────────────────────────────────────────────────
-
+// ─── VOICE FAB (FARM MITRA MASCOT & MULTILINGUAL SPEECH BUBBLE) ─────────────
 export function VoiceFAB() {
   const { navigateTo, state } = useApp();
   const isVoiceScreen = state.activeScreen === 5;
+  const currentLang = state.language ?? 'hi';
+  const t = TRANSLATIONS.floatingVoiceMitra;
+  const [bubbleDismissed, setBubbleDismissed] = useState(false);
 
   // On Voice AI screen, do not show floating FAB so it never blocks chat messages or mic controls
   if (isVoiceScreen) return null;
 
+  const title = t.title[currentLang] || t.title.en;
+  const bubbleText = t.speechBubble[currentLang] || t.speechBubble.en;
+  const speechHint = t.speechHint[currentLang] || t.speechHint.en;
+  const badgeOnline = t.badgeOnline[currentLang] || t.badgeOnline.en;
+  const closeLabel = t.closeTooltip[currentLang] || t.closeTooltip.en;
+
+  const handleOpenVoice = () => {
+    navigateTo(5);
+  };
+
+  const handleDismissBubble = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setBubbleDismissed(true);
+  };
+
   return (
-    <button
-      className="voice-fab"
-      onClick={() => navigateTo(5)}
-      aria-label="Open Voice AI"
-      id="btn-voice-fab"
-    >
-      <MicIcon />
-    </button>
+    <div className="voice-fab-widget" role="region" aria-label="Farm Mitra Voice Assistant">
+      {/* Friendly Speech Bubble Prompt (Like Top Websites) */}
+      {!bubbleDismissed && (
+        <div
+          className="voice-fab-bubble animate-in"
+          onClick={handleOpenVoice}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              handleOpenVoice();
+            }
+          }}
+          title={speechHint}
+          aria-label={`${title}: ${bubbleText}`}
+        >
+          {/* Header Row with Mini Avatar, Status & Dismiss */}
+          <div className="voice-fab-bubble__header">
+            <div className="flex items-center gap-1.5 min-w-0">
+              <span className="voice-fab-bubble__avatar-mini" aria-hidden="true">🌱</span>
+              <span className="voice-fab-bubble__name font-bold">{title}</span>
+              <span className="voice-fab-bubble__live-pill">
+                <span className="status-dot status-dot--live animate-pulse" aria-hidden="true" />
+                <span>{badgeOnline}</span>
+              </span>
+            </div>
+            <button
+              type="button"
+              className="voice-fab-bubble__close"
+              onClick={handleDismissBubble}
+              aria-label={closeLabel}
+              title={closeLabel}
+            >
+              ×
+            </button>
+          </div>
+
+          {/* Localized Friendly Prompt Line */}
+          <p className="voice-fab-bubble__text">
+            {bubbleText}
+          </p>
+
+          {/* Action Callout */}
+          <div className="voice-fab-bubble__action">
+            <span className="voice-fab-bubble__action-icon" aria-hidden="true">🎙️</span>
+            <span>{speechHint}</span>
+          </div>
+
+          {/* Speech Bubble Pointer Arrow */}
+          <div className="voice-fab-bubble__arrow" aria-hidden="true" />
+        </div>
+      )}
+
+      {/* Floating Mascot Avatar + Glowing Mic Action Button */}
+      <button
+        className="voice-fab"
+        onClick={handleOpenVoice}
+        aria-label={`${title} - ${speechHint}`}
+        title={`${title}: ${bubbleText}`}
+        id="btn-voice-fab"
+      >
+        <div className="voice-fab__mascot-wrap">
+          <FarmMitraMascot size={50} />
+        </div>
+        <div className="voice-fab__mic-badge" aria-hidden="true">
+          <MicIcon />
+        </div>
+        <span className="voice-fab__ping-ring" aria-hidden="true" />
+      </button>
+    </div>
   );
 }
 

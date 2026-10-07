@@ -88,4 +88,24 @@ describe('Multilingual Native Language Support (i18n)', () => {
     const hindiHome = t('nav', 'home', 'hi');
     expect(hindiHome).toBe('होम');
   });
+
+  it('6. Floating Farm Mitra mascot speech bubble provides dynamic localized prompts across all 5 languages', () => {
+    const langs: SupportedLanguage[] = ['hi', 'mr', 'en', 'kn', 'te'];
+    const mitraTrans = TRANSLATIONS.floatingVoiceMitra;
+
+    expect(mitraTrans).toBeDefined();
+    langs.forEach(lang => {
+      expect(mitraTrans.title[lang]).toBeTruthy();
+      expect(mitraTrans.speechBubble[lang]).toBeTruthy();
+      expect(mitraTrans.speechHint[lang]).toBeTruthy();
+      expect(mitraTrans.badgeOnline[lang]).toBeTruthy();
+    });
+
+    // English prompt
+    expect(mitraTrans.speechBubble.en).toContain("Ask anything! I'm your Farm Mitra");
+    // Hindi prompt
+    expect(mitraTrans.speechBubble.hi).toContain('फार्म मित्र');
+    // Marathi prompt
+    expect(mitraTrans.speechBubble.mr).toContain('फार्म मित्र');
+  });
 });
